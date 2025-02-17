@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 3의 배수 확인하기2
+    let userNumber = prompt('숫자를 입력하세요.');
+
+    if (userNumber !== null) {
+      if (parseInt(userNumber) % 3 === 0) {
+        alert('3의 배수입니다.');
+        document.write('<div>3의 배수입니다.</div>');
+      } else {
+        alert('3의 배수가 아닙니다.');
+        document.write('<div>3의 배수가 아닙니다.</div>');
+      }
+    } else {
+      alert('입력이 취소되었습니다');
+      document.write('<div>입력이 취소되었습니다</div>');
+    }
+  </script>
+</body>
+</html>

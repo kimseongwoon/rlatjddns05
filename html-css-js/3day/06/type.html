@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .accent {  /* .은 class를 지칭 */
+      color: blue;
+    }
+
+    .bg {      /* .은 class를 지칭 */
+      background-color: violet;
+    }
+
+    #container {  /* #은 id를 지칭 */
+      width: 500px;
+      margin: 10px auto;
+      padding: 10px;
+      border: 1px solid #000;
+    }
+
+    .container {
+      color: red;
+    }
+
+    p {
+      font-style: italic; /* 이탤릭체 */
+    }
+    h1, p {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1 class="accent bg">레드향</h1>
+    <p>껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다</p>
+    <p>레드향은 한라봉과</p>
+    <p class="container">비타민C와 비타민P</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    #rect {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      margin: 30px auto;
+      transition: .5s;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <p>도형 위로 마우스 포인터를 올려놓으세요.</p>
+    <div id="rect"></div>
+  </div>
+
+  <script>
+    let rect = document.getElementById('rect');
+    // rect태그에 마우스 오버했을 때
+    rect.addEventListener("mouseover", () => {
+      rect.style.backgroundColor = "green";  // background-color -> backgroundColor
+      rect.style.borderRadius = "50%";       // border-radius -> borderRadius
+    });
+
+    // rect태그에 마우스가 범위를 벗어났을 때
+    rect.addEventListener("mouseout", () => {
+      rect.style.backgroundColor = "";  // background-color -> backgroundColor
+      rect.style.borderRadius = "";       // border-radius -> borderRadius
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      border: 1px solid blue;
+    }
+    /*
+     * display값이 block이고 width auto이면 부모 요소의 크기만큼 자동으로 늘어나는 성질이 있음
+     * display값이 block이고 height auto이면 포함한 콘텐츠의 크기만큼 자동으로 맞추어주는 성질이 있음
+     * (<div class="box1">의 부모는 <body>태그)
+     * display값이 inline이고 width auto이면 포함한 콘텐츠의 크기만큼 자동으로 맞추어주는 성질이 있음
+     * display값이 inline이고 height auto이면 포함한 콘텐츠의 크기만큼 자동으로 맞추어주는 성질이 있음
+     */
+    .box1 {
+      width: 400px;   /* 고정 너비 */
+      height: 100px;  /* 고정 높이 */
+    }
+    .box2 {
+      width: 70%;      /* 가변 너비(부모 크기의 70%) */
+      height: 100px;   /* 고정 높이 */
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore amet cum maxime illum temporibus! Rem illo ducimus quaerat repellendus dolor voluptate temporibus numquam, quidem similique dicta, aliquid, nihil deserunt aperiam.</div>
+  <br><br>
+  <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur explicabo vero suscipit minima sed quis cupiditate magni, commodi eaque reiciendis possimus, dolore id accusamus optio iure recusandae, nihil iusto! Ratione.</div>
+</body>
+</html>

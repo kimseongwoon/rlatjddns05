@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  mariadb11-2-2:
+    image: mariadb:11.2.2
+    # container_name: mariadb11-2-2
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: my_backend
+      TZ: Asia/Seoul
+    ports:
+      - "9306:3306"
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./mariadb-data:/var/lib/mysql
+
+  maria10-6 :
+    image: docker.io/bitnami/mariadb:10.6
+    # container_name: maria10-6
+    ports:
+      - 8306:3306
+    volumes:
+      - ~/docker/mariadb/etc/mysql/conf.d:/etc/mysql/conf.d:ro
+      - ~/docker/mariadb/var/lib/mysql:/var/lib/mysql
+      - ~/docker/mariadb/var/log/maria:/var/log/maria
+    environment:
+      - TZ="Asia/Seoul"
+      - ALLOW_EMPTY_PASSWORD=no
+      - MARIADB_ROOT_PASSWORD=qwe1212!Q
+      - MARIADB_USER=admin
+      - MARIADB_DATABASE=animal
+      - MARIADB_PASSWORD=qwe1212!Q
+    # networks:
+    #   - backend
+    restart: always

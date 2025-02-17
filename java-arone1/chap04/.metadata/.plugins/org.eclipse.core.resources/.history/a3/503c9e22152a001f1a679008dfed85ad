@@ -1,0 +1,15 @@
+package com.student1;
+
+import java.util.*;
+
+public class Board1Service {
+	/**
+	 * 설명: 게시글 작성
+	 */
+	public void insertBoard() {
+		// 1. 게시글 제목 받기
+		Scanner scanner = new Scanner(System.in); // 키보드입력 받는 객체
+		
+		// 2. 게시글 내용 받기
+	}
+}

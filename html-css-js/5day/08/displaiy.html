@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+     * css의 display속성값
+     *   1. block: 블록레벨 요소
+     *       (1) width, height 값이 적용이 됨
+     *       (2) 한줄이 띄워짐
+     *   2. inline: 인라인레벨 요소
+     *       (1) width, height 값이 적용이 안됨
+     *       (2) 한줄이 띄워지지 않음
+     *   3. inline-block: 인라인레벨과 블록레벨 요소를 같이 가지고 있는 요소
+     *       (1) width, height 값이 적용이 됨
+     *       (2) 한줄이 띄워지지 않음
+     *   4. none: 화면에 출력하지 않음
+     */
+     nav > ul {
+       list-style: none;
+     }
+     nav ul li {
+      display: inline-block;
+      width: 100px;
+      height: 40px;
+      border: 1px solid #222;
+      margin: 10px;
+      text-align: center;
+      line-height: 40px;
+     }
+     a {
+       text-decoration: none;
+       /* color: black; */
+     }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+     <li><a href="#">메뉴 1</a></li>
+     <li><a href="#">메뉴 2</a></li>
+     <li><a href="#">메뉴 3</a></li>
+     <li><a href="#">메뉴 4</a></li>
+    </ul>
+  </nav>
+
+  <span style="display:block;">span태그이지만 display값을 block으로 변경함</span>
+  <div style="display:inline;">div태그이지만 display값을 inline으로 변경함</div>
+  <hr>
+  <span style="display:block;">안녕하세요</span><span style="display:block;">반갑습니다.</span>
+  <span style="display:inline-block; width: 100px;">하하하호호호</span>
+  <span style="display:inline-block;>안&nbsp;&nbsp;&nbsp;&nbsp;녕~</span>
+  
+</body>
+</html>

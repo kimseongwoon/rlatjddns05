@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 200px;
+      height: 200px;
+      background-color: royalblue;
+      overflow: hidden;  /* 부모 요소보다 넘쳐나는 것들은 숨김 */
+    }
+    .container .item {
+      width: 300px;
+      height: 300px;
+      background-color: orange;
+    }
+
+    .album1 {
+      width: 300px;
+      height: 199px;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+    .album2 {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item"></div>
+  </div>
+
+  <div class="album1">
+    <img src="images/cat.jpg" />
+  </div>
+  <div class="album2">
+    <img src="images/photo.jpg" />
+  </div>
+</body>
+</html>

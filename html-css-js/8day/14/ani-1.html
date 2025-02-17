@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+     * animation 속성값들
+     *   (1) @keyframes: 애니메이션이 바뀌는 시점 지정
+     *   (2) animation-delay: 애니메이션 지연 시간 지정
+     *   (3) animation-direction: 애니메이션을 종료한 뒤 처음부터 시작할지, 역방향으로 진행할지를 지정
+     *   (4) animation-duration: 애니매이션 실행 시간을 지정
+     *   (5) animation-iteration-count: 애니메이션 반복 횟수 지정
+     *   (6) animation-name: @keyframes로 설정해 놓은 애니메이션 지정
+     *   (7) animation-timing-function: 키프레임 전환 형재를 지정
+     *   (8) animation: (2),(3),(4),(5),(6),(7)를 한꺼번에 지정
+     */
+     .box {
+       width: 100px;
+       height: 100px;
+       background-color: #fa0;
+       animation-name: slideRight;  /* 키프레임 이름 */
+       animation-duration: 2s;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+       animation-timing-function: ease-in;
+       animation: slideRight 2s alternate infinite ease-in;
+     }
+     @keyframes slideRight { /* 키프레임 이름과 속성 지정 */
+       from {
+         transform: translateX(0px);
+       }
+       to {
+         transform: translateX(500px);
+       }
+     }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

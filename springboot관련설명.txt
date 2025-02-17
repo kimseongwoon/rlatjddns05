@@ -1,0 +1,28 @@
+versions
+  - java 21.0.2, jsp(tomcat 10.1.0)
+  - oracle 19c(19.1.0.0.0)
+  - spring boot 3.1.0 -> spring 6
+
+spring history
+  - spring 1.0.0 framework VS velocity VS structs -> java 1.2
+  - spring 2 -> java 1.4 ~ 
+  - spring 3 -> java 1.8 
+  - spring 4
+  - spring 5 -> java 11 ~
+  - spring 6 -> java 17 ~
+
+spring 단점
+  1. 너무 설정이 복잡하다. 세팅이 불편하다.
+  2. xml로 설정을 해야 했음.
+  3. 라이브러리 자체가 무겁다.
+
+spring boot -> spring 단점들을 보완한 프레임워크
+
+view(보는 거) -> template(일정한 형식) -> engine(지원 core)
+
+mvc 패턴
+  - m -> model
+  - v -> view
+  - c -> controller
+
+

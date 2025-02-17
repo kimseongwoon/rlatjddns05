@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="INFO">
+    <appenders>
+        <!-- log4j 메소드 호출시 console에 출력하도록 세팅 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- 로그 출력 세팅을 아래 패턴으로 출력 -->
+            <PatternLayout cgarset="UTF-8" pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </appenders>
+
+    <loggers>
+        <!-- info레벨에서만 console에 출력 -->
+        <root level="info" additivity="false">
+            <appenderRef ref="Console"/>
+        </root>
+
+        <logger name="org.springframework" level="INFO" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+
+        <logger name="org.zerock" level="INFO" additivity="false">
+        	<appender-ref ref="console" />
+        </logger>
+        
+        <logger name="org.zerock.springex.mapper" level="TRACE" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+    </loggers>
+</configuration>

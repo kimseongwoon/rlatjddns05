@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrapper {
+      width: 650px; 
+      height: 600px;
+      background-color: violet;
+      position: relative;
+    }
+    .wrapper .container {
+        width: 500px;
+        background-color: royalblue;
+        position: relative;
+    }
+    .wrapper .container .item {
+        border: 3px dashed red;
+    }
+    .wrapper .container .item:nth-child(1) {
+        width: 250px;
+        height: 100px;
+        background-color: yellow;
+        z-index: 999;
+        position: relative;
+    }
+    .wrapper .container .item:nth-child(2) {
+      width: 350px;
+      height: 150px;
+      background-color: orange;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      z-index: 2;
+    }
+    .wrapper .container .item:nth-child(3) {
+      width: 200px;
+      height: 300px;
+      background-color: brown;
+      position: relative;
+      left: 400px;
+      bottom: -50px;
+      z-index: 3;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">자식1</div>
+    <div class="item">자식2</div>
+    <div class="item">자식3</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <img src="./images/kitty-1.png" id="cat" />
+  </div>
+
+  <script>
+    let cat = document.querySelector('#cat');
+    cat.onclick = changePic;
+
+    let isFirst = true;
+
+    function changePic() {
+      //console.log('cat.src: ', cat.src);
+      if(cat.src.endsWith("1.png"))  // cat.src값이 1.png로 끝나게 되면
+        cat.src = "./images/kitty-2.png";
+      else
+        cat.src = "./images/kitty-1.png";
+
+        // if (isFirst) {   // 첫번째 그림이면 두번째 그림을 표시
+      //   cat.src = "./images/kitty-2.png";
+      //   isFirst = false;
+      // } else {        // 첫번째 그림이 아니면(두번째 그림이면) 첫번째 그림을 표시
+      //   cat.src = "./images/kitty-1.png";
+      //   isFirst = true;
+      // }
+    }
+  </script>
+</body>
+</html>

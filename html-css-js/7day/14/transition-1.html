@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+     * transition 속성값들
+     *   (1) transition-property: 트랜지션 대상(all, none, css속성이름)을 지정
+     *   (2) transition-duration: 트랜지션 지속시간(진행시간)을 지정(필수값)
+     *   (3) transition-timing-function: 트랜지션 속도곡선 지정
+     *   (4) transition-delay: 트랜지션 지연 시간 지정
+     *   (5) transition: (1),(2),(3),(4)속성들 한꺼번에 지정
+     */
+     .box {
+        margin:50px auto;
+        width: 100px;
+        height: 100px;
+        background-color: #fb5;
+        border: 1px solid #222;
+        /* Do it! 모든 대상에 2초 동안 ease-in 속도 곡선을 적용하는 트랜지션 */
+        transition: 1s ease-in 2s;  /* 대상: all, 시간:1초, 함수:ease-in, 지연시간: 2초 */
+      }
+      .box:hover {  /* 여기에 있는 속성이 모두 트랜지션 대상 */
+        width: 200px;
+        height: 200px;
+        background-color: #f50;
+        transform: rotate(270deg);			
+      }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

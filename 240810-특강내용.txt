@@ -1,0 +1,28 @@
+네트워크 IP와 Port
+  (1) 내부주소(IP) -> 인트라넷
+  (2) 외부주소(IP) -> 인터넷 제공 회사 공중망
+  (3) port -> 0 ~ 65535  
+      web port -> http(80), https(443), tomcat(8080)
+   * localhost -> 127.0.0.1
+
+    프로토콜://ip주소:포트/path
+
+TCP/IP 수업 -> 네트워크
+
+- aws에 스타벅스 웹프로그램을 사용하기 전 서버 설치내용
+  1. 보안그룹 생성(인바운드 규칙 22, 8080포트 사용)
+  2. 키페어 생성(pem파일) -> 필히 꼭 간직(1번만 다운로드 가능)
+  3. ec2(서버) 생성
+
+- aws에 만든 ec2(서버)에 접속하고 다운로드, 업로드할 프로그램 설치
+  1. mobaXterm -> ec2(서버)에 접속하여 서버 명령어들 입력할 수 있게 해 주는 프로그램
+    (1) sudo apt install net-tools
+    (2) wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.28/bin/apache-tomcat-10.1.28.tar.gz
+    (3) tar xvf apache-tomcat-10.1.28.tar.gz
+    (4) cd apache-tomcat-10.1.28
+    (5) sudo apt update -y
+    (6) cd
+    (7) sudo apt install openjdk-21-jre-headless -y
+    (8) cd /home/ubuntu/apache-tomcat-10.1.28/bin
+    (9) ./startup.sh 
+  2. filezilla -> ec2(서버)에 접속하여 다운로드, 업로드를 할 수 있게 해 주는 프로그램

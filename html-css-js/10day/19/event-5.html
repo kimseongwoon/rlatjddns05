@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="cotainer">
+    <img src="./images/kitty-1.png" id="cat">
+  </div>
+
+  <script>
+    let cat = document.querySelector('#cat');
+
+    // addEventListener() 함수 사용하기
+    // 요소.addEventListener(이벤트값(문자열(ex) onclick, ondblclick, ...), 함수명, 캡처 여부);
+    /*
+    cat.addEventListener('click', changePic, false);
+    cat.addEventListener('mouseout', originalPic, false);
+
+    function changePic() {
+      cat.src = './images/kitty-2.png';
+    }
+    function originalPic() {
+      cat.src = './images/kitty-1.png';
+    }
+    */
+    cat.addEventListener('click', () => {
+      cat.src = './images/kitty-2.png';
+    });
+    cat.addEventListener('mouseout', () => {
+      cat.src = './images/kitty-1.png';
+    });
+  </script>
+</body>
+</html>

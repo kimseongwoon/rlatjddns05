@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1 id="heading">에디오피아 게뎁</h1>
+    <div class="bright">b</div>
+    <div class="bright">c</div>
+    <div id="small-pic">
+      <img src="" alt="이미지1" />
+      <img src="" alt="이미지2"/>
+      <img src="" alt="이미지3"/>
+    </div>
+  </div>
+
+  <script>
+    // 1. id값으로 1개의 dom객체 가져오기
+    let heading = document.querySelector('#heading'); 
+    console.log(heading);
+    // 2-1. class이름으로 2개 이상의 객체를 가져옴
+    let brights = document.querySelectorAll('.bright');
+    console.log(brights);
+    // 2-2. class이름으로 1개 객체를 가져옴  
+    let bright = document.querySelector('.bright'); 
+    console.log(bright);
+
+    // id가 small-pic의 자식요소로 img태그가 있는 모든 객체를 가져온다.
+    let small_pic_img_list 
+      = document.querySelectorAll('#small-pic > img');
+    console.log('small_pic_img_list:', small_pic_img_list);
+  </script>
+</body>
+</html>

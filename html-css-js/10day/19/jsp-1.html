@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Programming</title>
+	<link rel="stylesheet" href="./css/subject.css">
+	<style>
+		.buttons {
+			margin-left: 10px;
+		}
+		.buttons button {
+			margin-left: 5px;
+			font-size: 0.9em;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form action="">
+      <label for="subject" class="hidden">주제</label>
+      <input type="text" id="subject" autofocus>
+      <button>추가</button>
+    </form>
+    <hr>  
+    <ul id="itemList"></ul>  
+  </div>
+
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const button = document.querySelector("button");
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+        newRegister();
+      });
+
+      const itemList = document.querySelector("#itemList");
+
+      // 새로운 항목 등록
+      function newRegister() {
+        const subject = document.querySelector("#subject");
+        if (subject.value.trim() === "") return alert("내용을 입력하세요."); // 빈 입력 방지
+
+        const newItem = document.createElement("li");
+        const newText = document.createTextNode(subject.value);
+
+        newItem.appendChild(newText);
+
+        // 수정 및 삭제 버튼 추가
+        const buttonContainer = document.createElement("span");
+        buttonContainer.className = "buttons";
+
+        const editButton = document.createElement("button");
+        editButton.textContent = "수정";
+        editButton.addEventListener("click", () => editItem(newItem, subject));
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "삭제";
+        deleteButton.addEventListener("click", () => deleteItem(newItem));
+
+        buttonContainer.appendChild(editButton);
+        buttonContainer.appendChild(deleteButton);
+        newItem.appendChild(buttonContainer);
+
+        itemList.appendChild(newItem);
+
+        subject.value = "";
+      }
+
+      // 항목 삭제
+      function deleteItem(item) {
+        if (confirm("삭제하시겠습니까?")) {
+          item.remove();
+        }
+      }
+
+      // 항목 수정
+      function editItem(item, inputField) {
+        const currentText = item.firstChild.textContent;
+        const newText = prompt("수정할 내용을 입력하세요:", currentText);
+        if (newText !== null && newText.trim() !== "") {
+          item.firstChild.textContent = newText.trim();
+        } else if (newText !== null) {
+          alert("내용을 입력하세요.");
+        }
+      }
+    });
+	</script>
+</body>
+</html>

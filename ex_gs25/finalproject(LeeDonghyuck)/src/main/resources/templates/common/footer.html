@@ -1,0 +1,669 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <title>GS25 Site | Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="재미있는 Lifestyle Platform GS25">
+
+    <link rel="apple-touch-icon-precomposed" href="/static/images/header/GS25_114.png">
+    <link rel="icon" href="/static/images/header/GS25_16.ico">
+    <link rel="shortcut icon" href="/static/images/header/GS25_16.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" >
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+        <script type="text/javascript">
+        //<![CDATA[
+
+        $(document).ready(function(){
+            $.suggestionHtml();
+
+            //높이조절
+            $(".family").on("click",function(){
+                if($(this).find(".ULWrap1st").height() == "284"){
+                    $(this).find(".ULWrap1st").height("286"); /* 2020-07-15 수정 */
+                    $(this).find(".ULWrap1st").css("top", "-260px"); /* 2021-07-01(브랜드) 수정 */
+                }
+                if($(this).find(".familyULWrap").height() == "284"){
+                    $(this).find(".familyULWrap").height("612"); /* 2022-07-20 수정 */
+                    $(this).find(".familyULWrap").css("top","-613px"); /* 2022-07-20 수정 */
+                }
+                return true;
+            });
+
+            $(".asia").on("click",function(){
+                if($(this).find(".asiaULWrap").height() == "184"){
+                    $(this).find(".asiaULWrap").height("80");
+                    $(this).find(".asiaULWrap").css("top","-81px");
+                }
+                return true;
+            });
+            $(".brand").on("click",function(){
+                if($(this).find(".ULWrap2nd").height() == "184"){
+                    $(this).find(".ULWrap2nd").height("469");/* 2023-12-1 수정 */
+                    $(this).find(".ULWrap2nd").css("top","-470px"); /* 2023-12-1 수정 */
+                }
+                return true;
+            });
+
+        });
+
+        //Footer 입지제안 Layer render
+        $.suggestionHtml = function(){
+            var divExist = $(".layer").length;
+            if(divExist > 0){
+                $.renderLayer(1);
+            } else {
+                $.renderLayer(0);
+            }
+        };
+
+
+        //rendering Layer
+        var layerHtml = "";
+
+        $.renderLayer = function(yn){
+            if(yn < 1){
+                layerHtml += '<div class="layer">';
+                layerHtml += '	<div class="bg"></div>';
+
+            }
+
+            layerHtml += '	<div id="layerFooter" class="pop-layer">';
+            layerHtml += '		<div class="popwrap lypop_my2">';
+            layerHtml += '			<div class="pop_tltwrap">';
+            layerHtml += '				<h4 class="pop_tlt1">입지제안</h4>';
+            layerHtml += '			</div>';
+            layerHtml += '			<div class="pop_cnt">';
+            layerHtml += '				<div class="all_wrap">';
+            layerHtml += '					<div class="tblwrap">';
+            layerHtml += '						<table class="tbl_ctype2" summary="입지제안의 기준 및 접수처를 확인할 수 있으며 사업부,추천기준,접수처를 제공합니다.">';
+            layerHtml += '							<caption>입지제안 안내팝업</caption>';
+            layerHtml += '							<colgroup>';
+            layerHtml += '								<col style="width:138px"/>';
+            layerHtml += '								<col style="width:285px"/>';
+            layerHtml += '								<col style="width:155px"/>';
+            layerHtml += '							</colgroup>';
+            layerHtml += '							<thead>';
+            layerHtml += '								<tr>';
+            layerHtml += '									<th scope="col">사업부</th>';
+            layerHtml += '									<th scope="col">추천 기준</th>';
+            layerHtml += '									<th scope="col">접수처</th>';
+            layerHtml += '								</tr>';
+            layerHtml += '							</thead>';
+            layerHtml += '							<tbody>';
+            layerHtml += '								<tr>';
+            layerHtml += '									<td class="ft_ct"><img alt="GS25 로고" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/ft_logo_gs25.png" /></td>';
+            layerHtml += '									<td>지역 : 전국<br/>규모 : 영업면적 10평 이상 임차점포</td>';
+            layerHtml += '									<td style="padding-left:15px;"><a class="btn onbtn" href="http://gs25.gsretail.com/gscvs/ko/franchise-info/one-on-ones-consult/location-offer" target="_blank" title="새 창" style="padding:10px 10px; margin:0; font-size:13px; background:#666;">입지제안 바로가기</a></td>';
+            layerHtml += '								</tr>';
+            layerHtml += '								<tr>';
+            layerHtml += '									<td class="ft_ct"><img alt="GS수퍼마켓 로고" src="http://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/ft_logo_gssuper.png" /></td>';
+            layerHtml += '									<td>지역 : 전국<br />규모 : 전용면적 50평 이상</td>';
+            layerHtml += '									<td style="padding-left:15px;"><a class="btn onbtn" href="https://gsthefresh.gsretail.com/thefresh/ko/franchise-info/one-on-ones-consult/offer-location" target="_blank" title="새 창" style="padding:10px 10px; margin:0; font-size:13px; background:#666;">입지제안 바로가기</a></td>';
+            layerHtml += '								</tr>';
+            layerHtml += '							</tbody>';
+            layerHtml += '						</table>';
+            layerHtml += '					</div>';
+            layerHtml += '					 <div class="btnwrap">';
+            layerHtml += '						<input class="btn sty01 onbtn" type="button" value="확인" onclick="$(\'#layerFooter\').find(\'.pop_cls a\').trigger(\'click\');" />';
+            layerHtml += '					</div>';
+            layerHtml += '				</div>';
+            layerHtml += '			</div>';
+            layerHtml += '			<div class="pop_cls">';
+            layerHtml += '				<a href="#">닫기</a>';
+            layerHtml += '			</div>';
+            layerHtml += '		</div>';
+            layerHtml += '	</div>';
+
+
+            layerHtml += '	<div  class="pop-layer" id="lypop_my11">';
+            layerHtml += '		<div class="popwrap lypop_my1" id="lypop_my11">';
+            layerHtml += '			<div class="pop_tltwrap">';
+            layerHtml += '				<h4 class="pop_tlt1">상품 입점 제안</h4>';
+            layerHtml += '			</div>';
+            layerHtml += '			<div class="pop_cnt">';
+            layerHtml += '				<div class="pop_tblwrap">';
+            layerHtml += '					<div class="pop_box2 w370">';
+            layerHtml += '						<div class="pop_txt1">';
+            layerHtml += '							<p>상품 입점 제안의 경우 이메일로 받고 있으며,<br />별도의 입점 제안 양식 없이 <br />회사 소개서, 상품 소개서 등 구비하신 내용을 <br />아래 메일 주소로 전달해주시면 됩니다.</p><p><strong class="ft_pink">product@watsons.co.kr</strong></p>';
+            layerHtml += '						</div>';
+            layerHtml += '						<div class="pop_txt3" style="font-size:12px;">';
+            layerHtml += '							*  담당 카테고리 MD 검토 후 순차적으로 피드백을 드리고 있어, 평균적으로<br />&nbsp;&nbsp;2주~4주 정도의 시간이 소요되는 점 참고바랍니다.';
+            layerHtml += '						</div>';
+            layerHtml += '						<div class="btnwrap pb10">';
+            layerHtml += '							<input type="button" value="확인" class="btn sty01 onbtn" onclick="$.closePopFooter(\'lypop_my11\');" />';
+            layerHtml += '						</div>';
+            layerHtml += '					</div>';
+            layerHtml += '				</div>';
+            layerHtml += '			</div>';
+            layerHtml += '			<div class="pop_cls">';
+            layerHtml += '				<a href="#">닫기</a>';
+            layerHtml += '			</div>';
+            layerHtml += '		</div>';
+            layerHtml += '	</div>';
+
+            if(false){
+            /* 이메일주소 무단수집 거부 - 팝카드 */
+                layerHtml += ' <div id="layerFooter-email" class="pop-layer">';
+                layerHtml += '  <div class="popwrap lypop_my1" id="lypop_my1">';
+                layerHtml += '  	<div class="pop_tltwrap">';
+                layerHtml += '  		<h4 class="pop_tlt1">이메일주소 무단수집 거부</h4>';
+                layerHtml += '  	</div>';
+                layerHtml += '  	<div class="pop_cnt">';
+                layerHtml += '  		<div class="pop_tblwrap">';
+                layerHtml += '  			<div class="pop_box2 w370">';
+                layerHtml += '  				<div class="ptn_popdate"><strong>게시일 2003년 3월 24일</strong></div>';
+                layerHtml += '  				<div class="pop_txt1 mt20">';
+                layerHtml += '  					<p class="ptn_poptxt">본 웹사이트에 게시된 이메일 주소가<br />전자우편 수집 프로그램이나 그밖의 기술적<br />장치를 이용하여 무단으로 수집되는 것을 거부하며,<br />';
+                layerHtml += '  					이를 위반시 정보통신망법에 의해<br />형사 처벌됨을 유념하시기 바랍니다. </p>';
+                layerHtml += '  				</div>';
+                layerHtml += '  			</div>';
+                layerHtml += '  		</div>';
+                layerHtml += '  	</div>';
+                layerHtml += '  	<div class="pop_cls">';
+                layerHtml += '  		<a href="#">닫기</a>';
+                layerHtml += '  	</div>';
+                layerHtml += ' 	 </div>';
+                layerHtml += ' </div>';
+
+            }else{
+
+                /* 이메일주소 무단수집 거부 레이어 - 공통  */
+                layerHtml += '    <div id="layerFooter-email" class="pop-layer">';
+                layerHtml += '      <div class="popwrap lypop_my1">';
+                layerHtml += '      		<div class="pop_tltwrap">';
+                layerHtml += '      			<h4 class="pop_tlt1">이메일주소 무단수집 거부</h4>';
+                layerHtml += '      		</div>';
+                layerHtml += '      		<div class="pop_cnt">';
+                layerHtml += '      			<div class="all_wrap">';
+                layerHtml += '      				<div class="pop_box4">';
+                layerHtml += '      					본 웹사이트에 게시된 이메일 주소가 전자우편 수집<br />';
+                layerHtml += '      					프로그램이나 그밖의 기술적 장치를 이용하여 무단으로<br />';
+                layerHtml += '      					수집되는 것을 거부하며, 이를 위반시 정보통신망법에 의해<br />';
+                layerHtml += '      					형사 처벌됨을 유념하시기 바랍니다.';
+                layerHtml += '      				</div>';
+                layerHtml += '      				<div class="pop_txt2">※ 게시일 2003년 3월 24일</div>';
+                layerHtml += '      				<div class="btnwrap">';
+                layerHtml += '      					<input class="btn sty01 onbtn" type="button" value="확인" onclick="$.closePopFooter(\'layerFooter-email\');" />';
+                layerHtml += '      				</div>';
+                layerHtml += '      			</div>';
+                layerHtml += '      		</div>';
+                layerHtml += '      		<div class="pop_cls">';
+                layerHtml += '      			<a href="#">닫기</a>';
+                layerHtml += '      		</div>';
+                layerHtml += '      	</div>';
+                layerHtml += '     	</div>';
+
+
+            }
+
+
+
+            if(yn < 1){
+                //layerHtml += '	</div>';
+                layerHtml += '</div>';
+
+            }
+
+            if(yn < 1){
+                $(".ftwrap").append(layerHtml);
+            } else {
+                $(".layer").append(layerHtml);
+            }
+
+        };
+
+        function fn_layer_popup(popNm, parentId) {
+            openLayerPopup(popNm, parentId);
+        }
+
+        //팝업 레이어
+        function layer_open_footer(el, parentId){
+            var temp = $('#' + el);
+            var bg = temp.prev().hasClass('bg');	//dimmed 레이어를 감지하기 위한 boolean 변수
+
+            $('.layer').fadeIn();
+            temp.fadeIn();
+
+            /* 2015-08-14 update - focus오류 수정. */
+            temp.attr("tabIndex", "-1");
+            $(document)
+                .off('focusin.modalLayer')
+                .on('focusin.modalLayer', $.proxy(function (e) {
+                    if ( temp[0] !== e.target && !temp.has(e.target).length) {
+                        temp.trigger('focus');
+                    }
+                }, this));
+
+            // 화면의 중앙에 레이어를 띄운다.
+            if (temp.height() < $(document).height() ) temp.css('margin-top', '-'+temp.height()/2+'px');
+            else temp.css('top', '0px');
+            if (temp.width() < $(document).width() ) temp.css('margin-left', '-'+temp.width()/2+'px');
+            else temp.css('left', '0px');
+
+
+            temp.find('.pop_cls a').click(function(e){
+                $('.layer').fadeOut();
+                $('.layer').find('.pop-layer').each(function(){
+                    $(this).fadeOut();
+                });
+
+                /* 2015-08-14 update - focus오류 수정. */
+                $(document).off('focusin.modalLayer');
+
+                if(parentId != undefined) {
+                    parentId.focus();
+                }
+
+                e.preventDefault();
+            });
+
+            //배경을 클릭하면 레이어를 사라지게 하는 이벤트 핸들러
+            $('.layer .bg').click(function(e){
+                $('.layer').fadeOut();
+                $('.layer').find('.pop-layer').each(function(){
+                    $(this).fadeOut();
+                });
+                e.preventDefault();
+            });
+
+        };
+
+        //확인 클릭 시 닫기
+        $.closePopFooter = function(el) {
+            $('#' + el).find('.pop_cls a').trigger('click');
+            /*
+            $('.layer').fadeOut();
+            $('.layer').find('.pop-layer').each(function(){
+                $(this).fadeOut();
+            });
+            $('#' + el).fadeOut();
+            */
+        };
+
+
+
+
+        //]]>
+    </script>
+        <!-- 푸터 -->
+        <div class="ftwrap">
+            <!-- 푸터 메뉴 -->
+            <script type="text/javascript">var _TRK_LID="22400";var _L_TD="ssl.logger.co.kr";var _TRK_CDMN="";</script>
+            <script type="text/javascript">
+                var _CDN_DOMAIN = location.protocol == "https:" ? "https://fs.bizspring.net" : "http://fs.bizspring.net";(function(b,s){var f=b.getElementsByTagName(s)[0],j=b.createElement(s);j.async=true;j.src='//fs.bizspring.net/fs4/bstrk.1m.js';f.parentNode.insertBefore(j,f);})(document,'script');
+            </script>
+            <noscript>
+                <img alt="Logger Script" width="1" height="1"
+                     src="http://ssl.logger.co.kr/tracker.tsp?u=22400&amp;js=N" />
+            </noscript>
+            <script type="text/javascript">
+                var _CZ_U = 22400;
+                var _CZ_HTTP_HOST = "ssl.logger.co.kr";  var _CZ_HTTPS_HOST = "ssl.logger.co.kr";
+                var _CZ_HOST=document.location.protocol.indexOf("https")!=-1?"https://"+_CZ_HTTPS_HOST:"http://"+_CZ_HTTP_HOST;
+                var _CZ_DU=encodeURIComponent(self.document.location.href);
+                var _CZ_CC=_trk_getCookieCZ("_TRK_CC");
+                var _CZ_IMG=new Image();
+                var _CZ_URL=".";
+                function _trk_getCookieCZ(name){var cookieName=name+"="; var x=0; while(x<=document.cookie.length) { var y=(x+cookieName.length); if(document.cookie.substring(x,y)==cookieName) {if((endOfCookie=document.cookie.indexOf(";",y))==-1) endOfCookie=document.cookie.length;  return unescape(document.cookie.substring(y,endOfCookie)); } x=document.cookie.indexOf(" ",x)+1; if(x == 0) break; } return "";} function _cz_getposition(obj) {var pos = new Object; pos.x = 0; pos.y = 0;	if( obj ) { pos.x = obj.offsetLeft;  pos.y = obj.offsetTop;  }      return pos;  } function _cz_iframe_mouseClick(i_ax,i_ay,iframeName) {	var iframeTop = 0 , iframeLeft = 0 ,px=0;	if(typeof(window.innerWidth)=='number'){ww=window.innerWidth;}else if(document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)){ww=document.documentElement.clientWidth;}else if(document.body && (document.body.clientWidth || document.body.clientHeight)){ww=document.body.clientWidth;}	if(iframeName){var ppos = _cz_getposition(document.all[iframeName]); iframeTop =  ppos.x;	iframeLeft =  ppos.y;}	c_ax =  iframeTop+ i_ax; c_ay = iframeLeft+ i_ay;rx=Math.round(c_ax-ww/2);px=Math.round(c_ax/ww*100); _CZ_IMG.src=_CZ_HOST+"/tracker_czn.tsp?u="+_CZ_U+"&czIdx=11448&ax="+c_ax+"&ay="+c_ay+"&rx="+rx+"&px="+px+"&ww="+ww+"&CC="+_CZ_CC;} function _cz_mouseClick(e) { if(document.location.href.indexOf(_CZ_URL)<0) return; var ax,ay,rx ; if(!e) var e=window.event; var _scrOfX = 0;  var _scrOfY = 0;if( document.body && ( document.body.scrollLeft || document.body.scrollTop)) {_scrOfY = document.body.scrollTop ;_scrOfX = document.body.scrollLeft;}else if( document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) {_scrOfY = document.documentElement.scrollTop;_scrOfX = document.documentElement.scrollLeft ;}ax=e.clientX+ _scrOfX;ay=e.clientY+ _scrOfY;_cz_iframe_mouseClick(ax,ay,""); } if(window.addEventListener)document.addEventListener('mousedown',_cz_mouseClick,false);else document.attachEvent('onmousedown',_cz_mouseClick);
+            </script>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    var otherFamilySite = new footerFamilySiteManager();
+                    otherFamilySite.setResource( ".ret_link .family", ".ULWrap1st" );
+                    otherFamilySite.setResource( ".ret_link .brand", ".ULWrap2nd" );
+                    otherFamilySite.init();
+                });
+            </script>
+            <div class="ft">
+                <div class="ft_menu">
+                    <ul>
+                        <li><a href="http://gs25.gsretail.com/gscvs/ko/about-gs25/gs25introduce">GS25소개 </a></li>
+                        <li><a href="http://www.gsretail.com/gsretail/ko/corporation/partnership/submain">입점상담</a></li>
+                        <li><a href="https://gs25.gsretail.com/gscvs/ko/customer-satisfaction/mantomancnsoundform">제휴문의</a></li>
+                        <li><a href="#" onclick="javascript:layer_open_footer('layerFooter', this);">입지제안</a></li>
+                        <li><a href="http://www.gsretail.com/gsretail/ko/footer/rental-store-all">임대상가안내</a></li>
+                        <li><a href="http://gs25.gsretail.com/gscvs/ko/footer/site-map">사이트맵</a></li>
+                    </ul>
+                </div>
+                <div class="ret_link">
+                    <dl class="family">
+                        <dt>
+                            <a href="#;">
+                                계열사 보기
+                                <span>&gt;</span>
+                            </a>
+                        </dt>
+                        <dd style="display: block;">
+                            <div class="ULWrap1st" style="overflow: hidden; width: 177px; height: 284px; position: absolute; left: -1px; top: -285px; display: none;"><!-- 2020-07-15 수정 -->
+                                <ul style="top: 1px; left: 0px; transform: matrix(1, 0, 0, 1, 0, 285);">
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/(주)GS 바로가기\' ); }catch(_e){ }');" href="http://www.gs.co.kr/" target="_blank" title="새창">(주)GS</a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS네트웍스 바로가기\' ); }catch(_e){ }');" href="http://gsnws.co.kr/" target="_blank" title="새창">GS네트웍스</a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS&amp;Point.com 바로가기\' ); }catch(_e){ }');" href="http://www.gsnpoint.com/" target="_blank" title="새창">GS&amp;Point.com</a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS칼텍스(Kixx) 바로가기\' ); }catch(_e){ }');" href="http://www.kixx.co.kr/" target="_blank" title="새창">GS칼텍스(Kixx)</a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS엠비즈 바로가기\' ); }catch(_e){ }');" href="http://www.gsmbiz.co.kr/" target="_blank" title="새창">GS엠비즈</a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS스포츠 바로가기\' ); }catch(_e){ }');" href="http://www.fcseoul.com/new_intro.jsp" target="_blank" title="새창">GS스포츠</a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS EPS 바로가기\' ); }catch(_e){ }');" href="http://www.gseps.com/kor/main/main.aspx" target="_blank" title="새창">GS EPS</a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/GS건설 바로가기\' ); }catch(_e){ }');" href="http://www.gsconst.co.kr/" target="_blank" title="새창">GS건설</a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 계열사/엘리시안강촌 바로가기\' ); }catch(_e){ }');" href="http://www.elysian.co.kr/" target="_blank" title="새창">엘리시안강촌</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="brand">
+                        <dt>
+                            <a href="#;">
+                                GS리테일 브랜드
+                                <span>보기</span>
+                            </a>
+                        </dt>
+                        <dd style="display: block;">
+                            <div class="ULWrap2nd" style="overflow: hidden; width: 170px; height: 184px; position: absolute; left: -1px; top: -185px; display: none;">
+                                <ul style="top: 1px; left: 0px; transform: matrix(1, 0, 0, 1, 0, 185);">
+                                    <li>
+                                        <a href="http://www.gsretail.com/gsretail/ko/company">GS리테일</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://gs25.gsretail.com/gscvs/ko/main">GS25</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.gsshop.com">GS SHOP</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://gsthefresh.gsretail.com/thefresh/ko/main">GS THE FRESH</a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/팝카드 바로가기\' ); }catch(_e){ }');" href="http://www.popcard.co.kr/popcard/ko/main" target="_blank" title="새창">팝카드</a>
+                                    </li>
+                                    <li class="line_clamp">
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/그랜드 인터컨티넨탈 서울 파르나스 바로가기\' ); }catch(_e){ }');" href="https://seoul.intercontinental.com/grandicparnas" target="_blank" title="새창">
+                                            그랜드 인터컨티넨탈
+                                            <br>
+                                            서울 파르나스
+                                        </a>
+                                    </li>
+                                    <li class="line_clamp">
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/인터컨티넨탈 서울 코엑스 바로가기\' ); }catch(_e){ }');" href="https://seoul.intercontinental.com/iccoex" target="_blank" title="새창">
+                                            인터컨티넨탈
+                                            <br>
+                                            서울 코엑스
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/나인트리호텔 명동 바로가기\' ); }catch(_e){ }');" href="http://www.ninetreehotels.com/nth1/" target="_blank" title="새창">
+                                            나인트리호텔 명동</a>
+                                    </li>
+                                    <li class="line_clamp">
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/나인트리 프리미어 호텔 명동 II 바로가기\' ); }catch(_e){ }');" href="http://www.ninetreehotels.com/nth2/" target="_blank" title="새창">
+                                            나인트리 프리미어
+                                            <br>
+                                            호텔 명동 II
+                                        </a>
+                                    </li>
+                                    <li class="line_clamp">
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/나인트리 프리미어 호텔 인사동 바로가기\' ); }catch(_e){ }');" href="http://www.ninetreehotels.com/nth3" target="_blank" title="새창">
+                                            나인트리 프리미어
+                                            <br>
+                                            호텔 인사동
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/나인트리 호텔 동대문 바로가기\' ); }catch(_e){ }');" href="http://www.ninetreehotels.com/nth4" target="_blank" title="새창">
+                                            나인트리 호텔 동대문</a>
+                                    </li>
+                                    <li class="line_clamp">
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/나인트리 프리미어 호텔 서울 판교 바로가기\' ); }catch(_e){ }');" href="http://www.ninetreehotels.com/nth5" target="_blank" title="새창">
+                                            나인트리 프리미어
+                                            <br>
+                                            호텔 서울 판교
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/파르나스몰 바로가기\' ); }catch(_e){ }');" href="http://www.parnasmall.com/" target="_blank" title="새창">
+                                            파르나스몰</a>
+                                    </li>
+                                    <li>
+                                        <a onmousedown="eval('try{ _trk_clickTrace( \'EVT\', \'PC웹/GS25/메인페이지/푸터 브랜드/우리동네 딜리버리 바로가기\' ); }catch(_e){ }');" href="http://woodel.co.kr/" target="_blank" title="새창">
+                                            우리동네 딜리버리</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="btm_sns_warp">
+                <div class="btm_sns_area">
+                    <div class="left">
+                        <div class="btm_sns">
+                            <img src="/static/images/footer/btm_gs25_sns.jpg" alt="GS25와 소통하세요!">
+                            <ul>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCl0HemfAt7dShJRf59_cuGQ" class="youtube" target="_blank" title="새 창">
+                                        <span class="hide">youtube</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/gs25_official" class="instagram" target="_blank" title="새 창">
+                                        <span class="hide">instagram</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/funGS25/" class="facebook" target="_blank" title="새 창">
+                                        <span class="hide">facebook</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://gs25friend.blog.me/" class="blog" target="_blank" title="새 창">
+                                        <span class="hide">blog</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://pf.kakao.com/_xlWdyu" class="kakaoplus" target="_blank" title="새 창">
+                                        <span class="hide">카카오플러스친구</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer copyright -->
+            <div class="ft_copy">
+                <div class="copywrap">
+                    <div class="copy">
+                        <div class="copy_menu">
+                            <ul>
+                                <li><a href="/gscvs/ko/footer/privacy">개인정보처리방침</a></li>
+                                <li><a href="/gscvs/ko/footer/member-terms">GS리테일 멤버십 회원약관</a></li>
+                                <li><a href="https://gs25.gsretail.com/membership-services/non-membership-accrual-service-info">GS25 비회원 적립 서비스 이용 안내서</a></li>
+                                <li><a href="#" onclick="javascript:layer_open_footer('layerFooter-email', this);">이메일무단수집거부</a></li>
+                                <li><a href="/gscvs/ko/about-gs25/map">오시는길</a></li>
+                                <li class="bold"><a href="http://www.gsretail.com/gsretail/ko/esg/ethics/precision?tab=3">정도경영/파트너사 목소리</a></li>
+                                <li class="bold"><a href="http://www.gsretail.com/gsretail/ko/esg/ethics/precision?tab=3">CEO에게 말한다</a></li>
+                            </ul>
+                        </div>
+                        <div class="copy_txt">
+                            <p>
+                                주소 : 서울시 강남구 논현로 508(역삼동 679번지 GS타워) | 대표이사 : 허연수 | 사업자등록번호 : 116-81-18745</p>
+                            <p>
+                                Copyright 2015 GSRetail. Co. Ltd., ALL Right Reserved.</p>
+                        </div>
+                    </div>
+                    <ul class="ft_banner">
+                        <li><img src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/mark03.gif" alt="고객만족 경영 명예의 전당 헌액"></li>
+                        <li><img src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/mark04.gif" alt="한국서비스대상 종합유통부문 종합대상 5회"></li>
+                        <li><img src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/mark05.gif" alt="GS25 편의점부문 1위,GS수퍼 대형슈퍼마켓 부문 1위"></li>
+                        <li><img src="http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/mark06.gif" alt="2019 코스피 마켓리더 브랜드 TOP 20 선정"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $.goMantoMan = function(){
+                    if("gsretail" == "gscvs"){
+                        location.href="http://www.gsretail.com/gsretail/ko/customer-satisfaction/submain";
+                    } else if("gscvs" == "gscvs"){
+                        location.href="http://www.gsretail.com/gsretail/ko/customer-satisfaction/mantomancnsoundgs25form";
+                    } else if("gssuper" == "gscvs"){
+                        location.href="http://www.gsretail.com/gsretail/ko/customer-satisfaction/mantomancnsoundgssmform";
+                    }
+                };
+            </script>
+            <div class="layer">
+                <div class="bg"></div>
+                <div id="layerFooter" class="pop-layer">
+                    <div class="popwrap lypop_my2">
+                        <div class="pop_tltwrap">
+                            <h4 class="pop_tlt1">입지제안</h4>
+                        </div>
+                        <div class="pop_cnt">
+                            <div class="all_wrap">
+                                <div class="tblwrap">
+                                    <table class="tbl_ctype2" summary="입지제안의 기준 및 접수처를 확인할 수 있으며 사업부,추천기준,접수처를 제공합니다.">
+                                        <caption>입지제안 안내팝업</caption>
+                                        <colgroup>
+                                            <col style="width:138px">
+                                            <col style="width:285px">
+                                            <col style="width:155px">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">사업부</th>
+                                            <th scope="col">추천 기준</th>
+                                            <th scope="col">접수처</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="ft_ct">
+                                                <img alt="GS25 로고" src="/static/images/footer/ft_logo_gs25.png"></td>
+                                            <td>
+                                                지역 : 전국
+                                                <br>
+                                                규모 : 영업면적 10평 이상 임차점포
+                                            </td>
+                                            <td style="padding-left:15px;">
+                                                <a class="btn onbtn" href="http://gs25.gsretail.com/gscvs/ko/franchise-info/one-on-ones-consult/location-offer" target="_blank" title="새 창" style="padding:10px 10px; margin:0; font-size:13px; background:#666;">입지제안 바로가기</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ft_ct">
+                                                <img alt="/static/images/footer/ft_logo_gssuper.png">
+                                            </td>
+                                            <td>
+                                                지역 : 전국
+                                                <br
+                                                >규모 : 전용면적 50평 이상
+                                            </td>
+                                            <td style="padding-left:15px;">
+                                                <a class="btn onbtn" href="https://gsthefresh.gsretail.com/thefresh/ko/franchise-info/one-on-ones-consult/offer-location" target="_blank" title="새 창" style="padding:10px 10px; margin:0; font-size:13px; background:#666;">입지제안 바로가기</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btnwrap">
+                                    <input class="btn sty01 onbtn" type="button" value="확인" onclick="$('#layerFooter').find('.pop_cls a').trigger('click');">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop_cls">
+                            <a href="#">닫기</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop-layer">
+                    <div class="popwrap lypop_my1" id="lypop_my11">
+                        <div class="pop_tltwrap">
+                            <h4 class="pop_tlt1">상품 입점 제안</h4>
+                        </div>
+                        <div class="pop_cnt">
+                            <div class="pop_tblwrap">
+                                <div class="pop_box2 w370">
+                                    <div class="pop_txt1">
+                                        <p>
+                                            상품 입점 제안의 경우 이메일로 받고 있으며,
+                                            <br>
+                                            별도의 입점 제안 양식 없이
+                                            <br>
+                                            회사 소개서, 상품 소개서 등 구비하신 내용을
+                                            <br>
+                                            아래 메일 주소로 전달해주시면 됩니다.
+                                        </p>
+                                        <p>
+                                            <strong class="ft_pink">
+                                                product@watsons.co.kr
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="pop_txt3" style="font-size:12px;">
+                                        *  담당 카테고리 MD 검토 후 순차적으로 피드백을 드리고 있어, 평균적으로
+                                        <br>
+                                        &nbsp;&nbsp;2주~4주 정도의 시간이 소요되는 점 참고바랍니다.
+                                    </div>
+                                    <div class="btnwrap pb10">
+                                        <input type="button" value="확인" class="btn sty01 onbtn" onclick="$.closePopFooter('lypop_my11');">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop_cls">
+                            <a href="#">닫기</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="layerFooter-email" class="pop-layer">
+                    <div class="popwrap lypop_my1">
+                        <div class="pop_tltwrap">
+                            <h4 class="pop_tlt1">이메일주소 무단수집 거부</h4>
+                        </div>
+                        <div class="pop_cnt">
+                            <div class="all_wrap">
+                                <div class="pop_box4">
+                                    본 웹사이트에 게시된 이메일 주소가 전자우편 수집
+                                    <br>
+                                    프로그램이나 그밖의 기술적 장치를 이용하여 무단으로
+                                    <br>
+                                    수집되는 것을 거부하며, 이를 위반시 정보통신망법에 의해
+                                    <br>
+                                    형사 처벌됨을 유념하시기 바랍니다.
+                                </div>
+                                <div class="pop_txt2">※ 게시일 2003년 3월 24일</div>
+                                <div class="btnwrap">
+                                    <input class="btn sty01 onbtn" type="button" value="확인" onclick="$.closePopFooter('layerFooter-email');">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop_cls">
+                            <a href="#">닫기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터 끝 -->
+</body>

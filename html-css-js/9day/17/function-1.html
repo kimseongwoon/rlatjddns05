@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function addNumber(num1, num2) {
+      // let sum = num1 + num2;
+      // return sum;
+      return num1 + num2;
+    }
+
+    let result = addNumber(2, 3);
+    document.write(`두 수를 더한 값: ${result}`);
+
+    // 매개변수 기본값 지정하기
+    function multiple1(a, b, c = 10) { // 함수 호출시에 c란에 값이 없으면 c는 기본값으로 10을 전달
+      return a * b + c;
+    }
+    function multiple2(a, b = 5, c = 10) {
+      return a * b + c;
+    }
+
+    document.write(`<div>multiple1: ${multiple1(2, 3)}</div>`);
+    document.write(`<div>multiple2: ${multiple2(2)}</div>`);
+  </script>
+</body>
+</html>

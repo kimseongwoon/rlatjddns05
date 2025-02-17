@@ -1,0 +1,36 @@
+jQuery -> 자바스크립트 라이브러리
+
+흐름(flow)이 중요하다.
+  -> 프로젝트 하면서 흐름을 잘 익히기
+
+JAVA(21)를 웹에서 인식할 수 있도록 해주는 java container서버를 세팅
+  -> Tomcat(10.1)	
+
+New -> Other -> Web(Dynamic Web Project) 
+-> New Runtime -> Apache Tomcat10.1 세팅
+
+Dynamic Web Project의 webapp폴더에 
+스타벅스 프론트코드 옮기기
+
+css파일      ../../  -> ../
+html파일    ../ -> ./
+공통         /starbucks -> 삭제
+
+JSP(Java Server Page)
+1. html -> jsp
+2. jsp 문법 및 기능
+  (1) <% 자바코드 %>
+  (2) <%@ include file="파일" %> -> 다른 jsp파일을 포함시키는 jsp기능 -> '@'는 지시어
+      cf) <jsp:include page="파일" />
+  (3) <%@ page  %> -> 해당 페이지의 인코딩 및 타입 세팅하는 jsp기능
+  (4) <%= 자바변수값 %> -> 자바변수값이 출력
+3. 다른 jsp에 key와 value넘기기
+  -> jsp파일?key1=value1&key2=value2 -> jsp파일에 Get방식으로 key1-value1, key2-value2를 넘긴다
+4. session, request, response, out 기능
+  -> session: 각 서버에 요청한 사용자들의 고유한 storage 객체
+  -> request: 서버 요청 전달 값들을 관리하는 객체
+  -> response: 서버에 응답 전달들을 관리하는 객체
+  -> out: 서버에 요청한 사용자에게 전달할 문자열 관리 객체
+
+
+

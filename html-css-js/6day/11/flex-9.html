@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     .container {
+      width:800px;
+      height:100px;
+      display:flex;
+      border:1px solid #222;
+      gap: 10px;
+    }                               
+    .box {
+      flex-basis: 300px;  
+    }
+    .box:nth-child(odd) {
+      background-color: #ffc400;
+    }
+    .box:nth-child(even) {
+      background-color: #a6ff00;
+    }
+    p {
+      font-weight: bold;
+      text-align: center;
+    }
+    #box1 {
+      /* flex-shrink의 기본값은 1 -> 줄이는 비율 없음 */
+      flex-shrink: 1;
+      order: 4;
+    }
+    #box2 {
+      flex-shrink: 0;
+      order: 2;
+    }
+    #box3 {
+      flex-shrink: 1;
+      order: 3;
+    }
+    #box4 {
+      flex-shrink: 2;
+      order: 1;
+      /* flex: 0 2; */
+    }
+
+    /* flex 속성 */
+    /* 
+     * flex: 증가비율(flex-grow) 감소비율(flex-shrink)(생략가능) 너비(flex-basis)(생략가능)
+     * flex: 1   ->  flex-grow: 1, flex-shrink: 1, flex-basis: 0
+     * flex: 3   ->  flex-grow: 3, flex-shrink: 1, flex-basis: 0
+     * flex: 0 1 auto -> flex-grow: 0, flex-shrink: 1, flex-basis: auto
+     * flex: 1 300px -> flex-grow: 1, flex-shrink: 1, flex-basis: 300px
+     */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box" id="box1"><p>a</p></div>
+    <div class="box" id="box2"><p>b</p></div>
+    <div class="box" id="box3"><p>c</p></div>
+    <div class="box" id="box4"><p>d</p></div>
+  </div>        
+</body>
+</html>

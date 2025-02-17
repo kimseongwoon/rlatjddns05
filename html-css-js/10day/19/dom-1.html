@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="heading">a</div>
+  <div class="bright">b</div>
+  <div class="bright">c</div>
+  <img src="" />
+  <img src="" />
+
+  <script>
+    // 1. id가 heading인 tag 객체를 가져옴
+    let heading = document.getElementById('heading');  
+    console.log(heading);
+    // 2. class이름으로 tag 객체 가져옴(2개 이상의 객체를 가져올 수 있음)
+    let bright = document.getElementsByClassName('bright');  
+    console.log(bright);
+    // 3. tag명으로 tag 객체 가져옴(2개 이상의 객체를 가져올 수 있음)
+    let images = document.getElementsByTagName('img');
+    console.log(images);
+  </script>
+</body>
+</html>

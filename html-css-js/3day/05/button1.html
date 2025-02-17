@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>반품 정보</h1>
+  <form action="return.jsp" method="post">      
+    <p>만일 수령한 상품에 문제가 있다면 즉시 <b>반품 신청</b>해 주세요.</p>
+    <p>반품 신청시 상품의 상태를 사진으로 첨부해 주세요.</p>
+    <hr>    
+    <label for="user-name">이름</label>
+    <input type="text" id="user-name" name="korName" value="" />  
+    <!-- Do it! 전송 버튼과 리셋 버튼 추가하기 -->    
+    <input type="submit" value="반품하기">  <!-- form태그의 action과 method방식으로 백엔드에 전송 --> 
+    <input type="reset" value="취소하기">   <!-- reset은 form안의 입력 값들을 초기화 -->     
+  </form>
+</body>
+</html>

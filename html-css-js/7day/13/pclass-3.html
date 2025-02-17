@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container :nth-child(2n) { /* 짝수 자식(even가능) 태그들만 적용 */
+      color: red;
+    }
+    .container :nth-child(2n+1) { /* 홀수 자식(odd가능) 태그들만 적용 */
+      color: green;
+    }
+    .container :nth-child(n+4) { /* 4번째 자식 요소부터 적용 */
+    }
+    .container :nth-child(-n+4) { /* 4번째 자식 요소까지 적용 */
+    }
+    .container :nth-child(3n) { /* 3의 배수요소에만 적용 */
+    }
+    .container :nth-child(n+3):nth-child(-n+5) { /* 3 ~ 5번째 자식 요소까지 적용 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+학습순서
+1. HTML
+2. CSS
+3. JAVASCRIPT
+4. 프로젝트 
+
+무료 동영상 강의: https://www.youtube.com/watch?v=7QyTYl-9WcE&list=PLG7te9eYUi7uqE5hxs-XUz6WaxXU44Rvo
+책 관련 실습 코드: https://github.com/funnycom/doit-hcj-new
+구글드라이브 주소: https://drive.google.com/file/d/1JHMc7K9MeBqbKDkAvYS1u4_Lwb5slisW/view
+넷플릭스 사이트 따라 만들기 pdf자료(회원가입 필요): https://buk.io/@kf5155
+
+주요 용어
+  - IP주소: 네트워크 주소(ex) 다세대 주택, 아파트 등)) 
+  - 도메인: IP주소와 연계한 의미있는 글자주소
+  - DNS: 도메인을 IP주소로 연계를 해 주는 서버
+  - 포트: 네트워크 주소(0 ~ 65535)
+
+VS Code 설치
+VS Code Extension설치 
+  - Live Server
+  - Prettier - Code formatter
+  - Rainbow Brackets, indent-rainbow
+  - 한국어(옵션) 

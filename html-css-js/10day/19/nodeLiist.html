@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Web Progrmming</h1>
+  <ul id="itemList">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <!-- <li>Typescript</li> -->
+  </ul>
+  <!-- <img src="./images/cat.jpg" /> -->
+
+  <script>
+    // 요소(노드) 새로 추가하기 
+    //  let nodeList = document.querySelector('ul');
+    let nodeList = document.getElementById('itemList');
+    let newItem = document.createElement('li');
+    newItem.appendChild(document.createTextNode('Typescript'));
+
+    nodeList.appendChild(newItem);
+
+    // 속성값이 있는 요소 새로 추가하기
+    let newImg = document.createElement('img');
+    newImg.src = './images/cat.jpg';
+
+    document.body.appendChild(newImg);
+
+    // 요소 삭제하기
+    let heading = document.querySelector('h1');
+    heading.remove();
+  </script>
+</body>
+</html>

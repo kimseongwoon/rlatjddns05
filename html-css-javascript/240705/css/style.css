@@ -1,0 +1,55 @@
+.parent {
+    font-size: 30px;
+}
+.child {
+    font-size: 200%; /* 부모가 30px * 0.5 = 15px */
+}
+.child-to-child {
+    font-size: 50%; /* 부모가 15px * 0.5 = 7.5px */
+}
+
+.parent-em {
+    font-size: 30px;
+}
+.child-em {
+    font-size: 2em; /* 부모가 30px * 2 = 60px */
+}
+
+html {
+    font-size: 30px;
+}
+
+.parent-vw {
+    font-size: 2vw; /* viewport의 가로크기의 2/100 */
+}
+.parent-vh {
+    font-size: 2vh; /* viewport의 세로크기의 2/100 */
+}
+
+.margin-a {
+    margin: 30px 60px 15px 10px;
+    margin-top: 30px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.margin-b {
+    margin-top: 30px;
+}
+
+.border-a {
+    border: 10px solid black;
+    border-width: 7px;
+    border-style: dashed;
+    border-color: blue;
+    border-top-width: 2px;
+}
+.border-b {
+    width: 250px;
+    height: 45px;
+    background-color: orange;
+    border: 0px solid black;
+    /* border-radius: 10px 0 0 0;
+    border-top-left-radius: 10px; */
+    text-align: center;    
+}

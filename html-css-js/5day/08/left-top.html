@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    /*
+     * position의 값(static 값은 제외)에 따라 left, right, top, bottom 속성으로 위치 값 이동
+    */
+    #pos1 {
+      position: absolute;
+      background-color: orange;
+      z-index: 3;
+      left: 50px;
+      top: 50px;
+    }
+    #pos2 {
+      position: absolute; 
+      background-color: blue;
+      z-index: 6;
+      right: 100px;
+      top: 100px;
+    }
+    #pos3 {
+      position: absolute; 
+      background-color: red;
+      z-index: 7;
+      left: 100px;
+      bottom: 100px;
+    }
+  </style>
+</head>
+<body>
+  <p id="pos1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nemo reprehenderit ad natus illum voluptatibus maxime non saepe ea ab provident accusantium, quaerat cumque! Quae perferendis facilis eum doloremque error?</p>
+  <p id="pos2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nemo reprehenderit ad natus illum voluptatibus maxime non saepe ea ab provident accusantium, quaerat cumque! Quae perferendis facilis eum doloremque error?</p>
+  <p id="pos3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nemo reprehenderit ad natus illum voluptatibus maxime non saepe ea ab provident accusantium, quaerat cumque! Quae perferendis facilis eum doloremque error?</p>
+</body>
+</html>

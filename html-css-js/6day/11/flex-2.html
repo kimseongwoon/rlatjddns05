@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container2 {
+      display: flex;
+      background-color: #eee;
+      border: 1px solid #222;
+    }
+    .container2 .box {
+      padding: 5px 45px;
+      margin: 5px;
+      width: 40px;
+      /* background-color: red; */
+    }
+    #opt1 {
+      flex-flow: column nowrap;  /*  flex-direction값 flex-flow값 */
+    }
+    #opt2 {
+      flex-wrap: wrap; /* 박스 크기에 따라 여러 줄로 표시하려고 함 */
+    }
+    #opt3 {
+      flex-wrap: wrap-reverse; /* 박스 크기에 따라 여러 줄로 거꾸로 표시하려고 함 */
+    }
+    p {
+      text-align: center;
+    }
+    /* box클래스를 가진 것의 홀수번째 상자에 css 적용 */
+    .box:nth-child(odd) {
+      background-color: rgb(255, 187, 0);
+    }
+    .box:nth-child(even) {
+      background-color: rgb(35, 220, 35);
+    }    
+  </style>
+</head>
+<body>
+  <div class="container2" id="opt1">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+    <div class="box"><p>5</p></div>
+    <div class="box"><p>6</p></div>
+  </div>
+  <div class="container2" id="opt2">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+    <div class="box"><p>5</p></div>
+    <div class="box"><p>6</p></div>
+  </div>
+  <div class="container2" id="opt3">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+    <div class="box"><p>5</p></div>
+    <div class="box"><p>6</p></div>
+  </div>
+</body>
+</html>

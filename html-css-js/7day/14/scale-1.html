@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     .container {
+				width:800px;
+				height:200px;
+				margin:20px auto;
+      }
+      .origin {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        float: left;
+        margin: 40px;
+      }
+      .origin > div {				
+        width:100px;
+        height:100px;
+        background-color:orange;
+        transition: .5s;  /* 트랜지션 효과 1초 적용 */
+      }
+
+    #movex:hover {
+      transform: scaleX(2); /* 기존 너비 크기의 2배만큼 늘림 */
+    }
+    #movey:hover {
+      transform: scaleY(.5); /* 기존 높이 크기의 0.5배만큼 늘림 */
+    }
+    #movexy:hover {
+      transform: scale(2, .5); /* 기존 높이 크기의 0.5배만큼 늘림 */
+    }  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="origin">
+      <div id="movex"></div>		
+    </div>
+    <div class="origin">
+      <div id="movey"></div>	
+    </div>
+    <div class="origin">
+      <div id="movexy"></div>		
+    </div>
+  </div>
+</body>
+</html>

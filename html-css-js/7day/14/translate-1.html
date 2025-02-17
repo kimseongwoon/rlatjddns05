@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+     * transform css 속성(2d(x, y), 3d(x, y, z))
+     *   (1) translate -> 이동에 관련된 함수
+     *   (2) scale -> 크기에 관련된 함수
+     *   (3) rotate -> 회전에 관련된 함수
+     *   (4) skew -> 기울임에 관련된 함수
+     */
+     .container {
+				width:800px;
+				height:200px;
+				margin:20px auto;
+      }
+      .origin {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        float: left;
+        margin: 40px;
+      }
+      .origin > div {				
+        width:100px;
+        height:100px;
+        background-color:orange;
+        transition: .2s;  /* 트랜지션 효과 1초 적용 */
+      }
+
+    #movex:hover {
+      transform: translateX(50px); /* 박스 left, top기준으로 오른쪽으로 50px 이동 */
+    }
+    #movey:hover {
+      transform: translateY(20px); /* 박스 left, top기준으로 아래로 20px 이동 */
+    }
+    #movexy:hover {
+      transform: translate(10px, 20px); /* 박스 left, top기준으로 오른쪽 10px, 아래로 20px 이동 */
+    }  
+    /* 중앙에 배치하기 trick */    
+    .parent {
+      width: 300px;
+      height: 300px;
+      border: 3px solid orange;
+      position: relative;
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+    }
+    .parent .child {
+      width: 100px;
+      height: 100px;
+      border: 3px solid blue;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="origin">
+      <div id="movex"></div>		
+    </div>
+    <div class="origin">
+      <div id="movey"></div>	
+    </div>
+    <div class="origin">
+      <div id="movexy"></div>		
+    </div>
+  </div>
+
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</body>
+</html>

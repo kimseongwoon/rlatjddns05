@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 400px;
+      margin: 0 auto;
+    }
+    .drawBorder {
+      border: 1px solid black;
+      padding: 5px;
+    }
+    .blueText {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="drawBorder">Web Progrmming</h1>
+    <ul id="itemList">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li class="blueText drawBorder">Javascript</li>
+    </ul>
+  </div>
+
+  <script>
+    console.log(document.querySelector('h1').classList);
+    console.log(document.querySelectorAll('ul > li')[2].classList);
+  </script>
+</body>
+</html>

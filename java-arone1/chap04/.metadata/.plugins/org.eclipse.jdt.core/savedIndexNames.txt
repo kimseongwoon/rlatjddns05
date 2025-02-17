@@ -1,0 +1,21 @@
+INDEX VERSION 1.134+C:\Users\human-01\java-arone1\.metadata\.plugins\org.eclipse.jdt.core
+1857623796.index
+2663481984.index
+1865797976.index
+10819363.index
+3922113046.index
+130601786.index
+2007115701.index
+1033616887.index
+135834796.index
+152263432.index
+2115267486.index
+3271193799.index
+3872911820.index
+2578204313.index
+623916467.index
+517202555.index
+3952646235.index
+1775555309.index
+4004214287.index
+4041048919.index

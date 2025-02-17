@@ -1,0 +1,22 @@
+python -> 데이터 분석, 머신러닝, 딥러닝, 웹사이트개발
+java -> 객체지향(OOP)
+sql -> DB(조회, 수정, 삭제, 삽입)(CRUD)
+
+  -> java + sql, python + sql -> 백엔드 개발
+
+html -> 브라우저 웹사이트 화면설계 구조 개발 -> 정적 페이지
+css -> 화면설계 구조에 스타일링 입히는 언어 -> 정적 페이지
+javascript -> html과 css로 만들어진 것들을 동적인 페이지로 바꾸는 언어
+  -> html + css + javascript -> 프론트 개발
+  -> javascript + sql -> 백엔드 개발
+
+프레임워크 추가
+css -> bootstrap, tailwindcss, sass(scss) etc...
+python -> pandas, numpy, sckit-learn, tensorflow, pytorch, django, flask, fastapi etc......
+java -> jsp, android, spring(spring boot) etc...
+javascript(nodejs) -> jquery, angular, react, vue, nestjs, nextjs, express etc....
+
+triple JJJ -> jquery, jsp, javascript(html, css) + java, oracle-sql
+
+
+

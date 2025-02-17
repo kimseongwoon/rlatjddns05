@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      width: 500px;
+      height: 200px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      line-height: 2;
+    }
+    #static {
+      position: static;
+    }
+    #relative-1 {
+      position: relative;  /* 현재 위치 기준으로 위치값 지정이 가능 */
+      /* display: none; */
+    }
+    #relative-2 {
+      position: relative;  /* 현재 위치 기준으로 위치값 지정이 가능 */
+      left: 100px;
+      top: -50px;
+      /* display: none; */
+    }
+    #fixed {
+      position: fixed;
+      right: 30px;
+      top: 30px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      /* display: none; */
+    }
+  </style>
+</head>
+<body>
+  <p id="static">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sit nam assumenda, alias fugiat culpa odio repellat reiciendis porro nesciunt dolore modi pariatur a tenetur omnis illum, laborum doloribus consectetur.</p>
+  <p id="relative-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque et incidunt impedit nostrum. Adipisci placeat voluptatibus unde odit sequi nisi expedita laborum laboriosam facilis asperiores soluta, pariatur cumque nam mollitia.</p>
+  <p id="relative-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, quidem vitae? Beatae officiis voluptates, doloribus atque obcaecati, dolores eveniet magni sed numquam distinctio blanditiis illum earum, minus voluptatem optio quos?</p>
+  <p id="fixed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum animi sunt quis corporis voluptatibus sit maxime quod ipsam unde minima, dolore consequuntur. Eius reiciendis ipsam magnam saepe amet, sapiente ea!</p>
+</body>
+</html>

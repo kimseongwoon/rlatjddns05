@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div p:first-child { /* 첫번째 자식 요소가 p일 때만 스타일 적용 */
+      color: red;
+    }
+    div div:last-child { /* div 마지막 자식 요소일 때만 스타일 적용 */
+      color: green;
+    }
+    div div:only-child { /* 자식요소가 하나인 경우일 때만 스타일 적용 */
+      color: orange;
+    }
+    div.test1 + p {  /* div태그의 class이름이 test1의 바로 인접한 형제 p태그 스타일 적용 */
+      color: blue;
+    }
+    div div:nth-child(2) { /* div태그 내의 2번째 div태그인 것에 스타일 적용 */
+      color: violet;
+    }
+    div p:nth-child(3) { /* div태그 내의 3번째 p태그인 것에 스타일 적용 */
+      color: yellow;
+    } 
+  </style>
+</head>
+<body>
+   <div class="container">
+    <!-- <div class="test1">테스트1</div> -->
+    <p>첫 번째</p>
+    <div>두 번째</div>
+    <p>세 번째</p>
+    <div>네 번째</div>
+  </div>
+  <div class="container"> <!-- 자식요소가 하나인 경우 -->
+    <div>혼자~</div>  
+  </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+.tab-sorting button {
+    position: relative;
+    display: inline-block;
+    margin: 10px 12px 0 12px;
+    padding: 0 0 5px 0;
+    border: 0;
+    color: #555;
+    font-size: 1.0667em;
+    font-weight: 400;
+    border-bottom: 2px solid #fff;
+    background-color: #fff
+}
+
+[type=button],[type=reset],[type=submit],button {
+    -webkit-appearance: button
+}
+
+button {
+    cursor: pointer;
+    letter-spacing: -.5px;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif
+}
+
+button,input {
+    overflow: visible
+}
+
+.tab-sorting button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -14px;
+    top: 2px;
+    width: 1px;
+    height: 14px;
+    background-color: #d8d9db
+}
+
+button,input,optgroup,select,textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: 1.15
+}
+
+.tab-sorting {
+    margin-top: -10px;
+    text-align: center
+}
+
+.mb20 {
+    margin-bottom: 20px!important
+}
+
+.time-schedule .btn-next,.time-schedule .btn-pre {
+    width: 30px;
+    height: 73px;
+    border: 0!important;
+    background-color: transparent!important;
+    float: left
+}
+
+.time-schedule .date-list {
+    width: 980px;
+    overflow: hidden;
+    float: left;
+    height: 72px
+}
+
+.tab-list>ul>li>a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 41px;
+    line-height: 40px;
+    padding: 0;
+    text-align: center;
+    color: #222;
+    font-size: 1.0667em;
+    text-decoration: none
+}
+
+.box-slash .box-slash-btn a {
+    font-size: .9333em;
+    display: block;
+    text-decoration: none;
+    padding: 5px 25px 5px 20px;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/bg/bg-top-text-btn.png) 102px center no-repeat
+}
+
+.time-schedule .year {
+    position: absolute;
+    top: 0;
+    font-size: .8667em;
+    width: 70px;
+    height: 28px;
+    line-height: 28px;
+    margin-top: -14px;
+    border: 1px solid #d8d9db;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #fff;
+    font-weight: 400
+}
+
+.time-schedule .date-area {
+    height: 73px;
+    float: left
+}
+
+.time-schedule .date-area button span {
+    vertical-align: bottom;
+    line-height: 1.1
+}
+
+.ir {
+    text-indent: -9999px;
+    position: fixed;
+    top: -9999px;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+    opacity: 0
+}
+
+.time-schedule .date-area button.disabled em+span {
+    color: #666!important;
+    font-weight: 400
+}
+
+.time-schedule .date-area button em {
+    display: block;
+    font-size: 1.2em;
+    line-height: 1.1;
+    padding: 5px 0;
+    font-family: Roboto;
+    font-weight: 300
+}
+
+.time-schedule .date-area button.sat {
+    color: #3b5fcb
+}

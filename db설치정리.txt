@@ -1,0 +1,27 @@
+RDBMS(Relation Database Management System)
+
+1. 오라클 회원가입  -> https://signon.oracle.com/signin -> Create Account
+2. Oracle 19c 다운로드 -> 용량 약 3기가
+3. Oracle 19c 다운로드 파일 압축 풀기
+4. Oracle 19c 설치
+  (1) 압축푼 파일 및 폴더를 C:\ 혹은 D:\ 통채로 옮김
+  (2) 설치된 폴더가 한글이 있어서는 안됨
+  (3) 오라클 DATA파일이 소문자로 하는 것이 좋음
+  (4) Docker를 설치 전에 해 주는 것이 좋음
+
+sql plus(id: system   pw: 1234) + sql developer(x)
+1. 오라클 접속 쿼리 클라이언트 프로그램 다운로드 -> Dbeaver
+
+제어판 - 프로그램 추가 및 제거 - Windows 기능 켜기
+Linux용 Windows 하위 시스템
+텔넷 클라이언트
+체크
+
+windows store에서 ubuntu 22.04.3 lts 설치
+
+docker 다운로드 및 설치
+
+ERD프로그램 -> draw.io 사이트 이용
+
+mysql8.0 다운로드(32bit)
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+      width: 500px;
+      margin: 10px auto;
+      padding: 0px;
+    }
+    li {
+      width: 90px;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      font-size: 16px;
+      text-align: center;
+      display: inline-block;
+    }
+    #result {
+      width: 350px;
+      height: 220px;
+      margin: 30px auto;
+      border: 2px solid #ccc;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 태그(tag)안에서 자바스크립트 사용하여 이벤트 처리하기 -->
+    <ul>
+      <li><a href="#" onclick="changeBg('green');">Green</a></li>
+      <li><a href="#" ondblclick="changeBg('orange');">Orange</a></li>
+      <li><a href="#" onclick="changeBg('purple');">Purple</a></li>
+    </ul>
+    <div id="result"></div>
+    
+    <script>
+    function changeBg(color) {
+      // id가 result인 태그객체를 가져온다
+      let result = document.querySelector('#result');
+      result.style.backgroundColor = color;
+    }
+  </script>
+</body>
+</html>

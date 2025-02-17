@@ -1,0 +1,21 @@
+1. 폴더 혹은 파일 생성시 주의할 것
+  (1) 영어 or 숫자 or 아래 특수문자로 적기. 한글이름 X
+  (2) 특수문자는 -(빼기),_(언더바) 허용
+  (3) 빈칸 허용 안됨
+
+window키 + R -> 빠른실행
+\\192.168.0.104\240507-edu1  유선
+\\192.168.78.8\240507-edu1    무선(human4f-iptime)
+
+4교육실 비밀번호: 0612*    
+            마지막 나갈 때 에어컨 끄고 소등 : *
+4층 wifi
+  ssid: human43f-2g         pw: human401!
+  ssid: human4f-iptime      pw: human402!
+  ssid: human4f-iptime5G   pw: human402!
+
+for a in [1,2,3]:  엔터
+탭(4칸 들여쓰기)    print(a)     엔터
+shift + 엔터
+
+화면캡처 단축키: shift + 윈도우키 + s

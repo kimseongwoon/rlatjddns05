@@ -1,0 +1,1788 @@
+element.style {
+}
+
+.cnt_topwrap {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+/*content*/
+.cntwrap {
+    width: 100%;
+    margin: auto;
+    border-top: 1px solid #dfdfdf;
+}
+
+.cnt_top {
+    position: relative;
+    width: 960px;
+    height: 48px;
+    margin: 0 auto;
+}
+
+.lctwrap {
+    position: relative;
+}
+
+.lctwrap .lct {
+    height: 50px;
+    z-index: 2;
+}
+
+.lctwrap .lct:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.lctwrap .lct > li:first-child {
+    background: none;
+}
+
+.lctwrap .lct > li {
+    position: relative;
+    float: left;
+    display: inline-block;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/icon_nav.png) no-repeat;
+    background-position: 0 -51px;
+    height: 48px;
+    padding-left: 20px;
+}
+
+.lctwrap .lct > li > a.home {
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/icon_nav.png) no-repeat;
+    background-position: 0 0;
+    text-indent: -999em;
+    width: 16px;
+    height: 30px;
+    margin-top: 16px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.lctwrap .lct .lct_op {
+    display: inline-block;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/icon_nav.png) no-repeat;
+    background-position: 10px -118px;
+    text-indent: -999em;
+    width: 20px;
+    height: 20px;
+}
+
+.lctwrap .lct_ly {
+    position: relative;
+    z-index: 10;
+    top: -37px;
+    left: 0;
+}
+
+.lctwrap .lct_ly ul {
+    background: #ffffff;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+}
+
+.lctwrap .lct_ly ul li a {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    padding: 0px 30px 0px 32px;
+}
+
+.lctwrap .lct_ly ul li {
+    display: block;
+    line-height: 26px;
+    background: #fbfbfb;
+    width: 100%;
+}
+
+.lctwrap .lct > li > a.lst {
+    color: #008296;
+}
+
+.lctwrap .lct_ly {
+    position: relative;
+    z-index: 10;
+    top: -37px;
+    left: 0;
+}
+
+.lctwrap .lct_ly ul {
+    background: #ffffff;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+}
+
+.pb20 {
+    padding-bottom: 20px !important;
+}
+
+.lctwrap .lct:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.lctwrap {
+    position: relative;
+}
+
+.snswrap {
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+
+.snswrap ul:after {
+    content: '.';
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+}
+
+.snswrap li:first-child {
+    background: none;
+}
+
+.snswrap li {
+    float: left;
+    background: url(/_ui/desktop/common/images/gsretail/common/icon_nav.png) no-repeat;
+    background-position: 0px -452px;
+    width: 40px;
+}
+
+.snswrap li a.print {
+    background-position: 14px -402px;
+    text-indent: 0em;
+    color: #666;
+    text-align: right;
+    width: 64px;
+    line-height: 43px;
+}
+
+.snswrap li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/icon_nav.png) no-repeat;
+}
+
+.cnt_top:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+element.style {
+    display: none;
+}
+
+.popwrap.lypop_my1 {
+    width: 450px;
+}
+.popwrap {
+    position: relative;
+    background: #fff;
+    border: 1px solid #5e5e5e;
+}
+
+.popwrap .pop_tltwrap {
+    background: #444;
+}
+
+.popwrap .pop_tltwrap .pop_tlt1 {
+    background: url(/_ui/desktop/common/images/gscvs/common/ico_popt.gif) no-repeat 25px 20px;
+    padding: 20px 0px 20px 37px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.popwrap .pop_cnt {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.popwrap .pop_cnt .pop_sect, .popwrap .pop_cnt .pop_sect p {
+    font-size: 15px;
+    color: #444;
+    line-height: 26px;
+    text-align: center;
+}
+
+.popwrap .pop_cnt .pop_sect, .popwrap .pop_cnt .pop_sect p {
+    font-size: 15px;
+    color: #444;
+    line-height: 26px;
+    text-align: center;
+}
+
+.popwrap .btnwrap {
+    padding: 40px 0 0 0;
+}
+
+.btnwrap {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.popwrap .pop_cls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #373737;
+}
+
+.popwrap .pop_cls a {
+    display: block;
+    background: url(/_ui/desktop/common/images/gscvs/common/ico_style.png) no-repeat;
+    background-position: 22px -22px;
+    text-indent: -999em;
+    /* padding: 21px 24px 20px 24px; */
+    width: 62px;
+    height: 60px;
+}
+
+.cnt {
+    clear: both;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.tlt3 {
+    padding-top: 70px;
+    font-size: 35px;
+    color: #222;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+.tlt3_txt {
+    position: relative;
+    margin: 25px 0 70px;
+    font-size: 16px;
+    color: #444;
+    line-height: 24px;
+}
+
+.mdwrap {
+    padding: 50px 0;
+}
+
+.wrap_wfull {
+    background: #f7f7f7;
+}
+
+.mdwrap .md_sect {
+    position: relative;
+    width: 984px;
+    margin: 0 auto;
+}
+
+.mdwrap .md_sect > .tit {
+    font-size: 30px;
+    font-weight: bold;
+    color: #222;
+}
+
+.md_controller {
+    position: relative;
+    z-index: 9;
+}
+
+md_controller .btn.stop {
+    position: absolute;
+    top: -37px;
+    right: 78px;
+    width: 34px;
+    height: 34px;
+    background-position: 0 0;
+}
+
+.md_controller a {
+    margin-left: 0;
+    display: block;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/products/ico_arr.png) no-repeat;
+    text-indent: -999em;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    line-height: normal;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.md_controller .btn.prev {
+    position: absolute;
+    top: -37px;
+    right: 39px;
+    width: 34px;
+    height: 34px;
+    background-position: 0 -306px;
+}
+
+.mdwrap .md_sect .mdprod_list {
+    margin-top: 20px;
+    width: 105%;
+    height: 422px;
+}
+
+.mdwrap .md_sect .mdprod_list li {
+    float: left;
+    margin-right: 19px;
+}
+
+.prod_box {
+    position: relative;
+    width: 266px;
+    height: 363px;
+    padding: 30px 20px 25px;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 2px 0 #eaeaea;
+    background: #fff;
+}
+
+.prod_box > .img {
+    margin: 0 auto;
+    width: 246px;
+    height: 269px;
+    background: url(/_ui/desktop/common/images/gscvs/products/md_no_img.gif) no-repeat;
+}
+
+.prod_box .prod_info {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed #dcdcdc;
+}
+
+.prod_box .tit {
+    font-size: 14px;
+    color: #222;
+}
+
+.prod_box .price .cost {
+    font-size: 20px;
+    color: #222;
+    font-weight: bold;
+}
+
+.prod_box .price .cost span {
+    font-size: 13px;
+    color: #222;
+}
+
+.prod_box .price {
+    margin: 10px 0 15px;
+}
+
+.flag_box {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    z-index: 99;
+}
+
+.container .heroes .hero:hover {
+    background-color: blue;
+    transform: skewX(-14deg) scale(1.5);
+    z-index: 1;
+}
+
+.flag_box .flg02 {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/products/flag_bg.png) -65px 0 no-repeat;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+fieldset, img, table, caption, tbody, tfoot, thead, tr, th, td, button, hr {
+    border: 0 none;
+}
+
+button {
+    overflow: visible;
+    border: 0 none;
+    cursor: pointer;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.mt50 {
+    margin-top: 50px !important;
+}
+
+.cnt_section {
+    width: 960px !important;
+    margin: 0 auto;
+    clear: both;
+}
+
+.brdwrap {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+    padding: 0;
+}
+
+form, select, input, textarea {
+    vertical-align: middle;
+    font-family: 'NanumBarunGothic', NanumBarunGothic, '돋움', Dotum, Arial, sans-serif;
+    font-size: 13px;
+}
+
+legend {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    line-height: 0;
+    text-indent: -999em;
+    white-space: nowrap;
+}
+
+.mb60 {
+    margin-bottom: 60px;
+}
+
+.pro_schwrap .sch_ip {
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 40px 0;
+    background: #fbfbfb;
+}
+
+.pro_schwrap .sch_ip > div {
+    width: 845px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.pro_schwrap label {
+    padding: 10px 10px 10px 40px;
+    font-size: 15px;
+    color: #444;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/franchise/icon_faq.png) 0px -154px no-repeat;
+}
+
+.pro_schwrap .sch_ip .ipt_typ01 {
+    border: 2px solid #3b7da9;
+    width: 496px;
+    height: 36px;
+    line-height: 36px;
+}
+
+input[type=text], input[type=password] {
+    text-indent: 5px;
+    border: 1px solid #d6d6d6;
+    height: 29px;
+    line-height: 31px;
+    color: #666;
+    font-size: 13px;
+}
+
+.pro_schwrap .sch_ip .btn_sch {
+    width: 100px;
+    padding: 12px 0;
+    text-align: center;
+    background: #397ca8;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type=button] {
+    border: 0;
+}
+
+.pro_schwrap .sch_ip .btn_sch2 {
+    width: 100px;
+    padding: 12px 0;
+    text-align: center;
+    border: 1px solid #999;
+    background: #fbfbfb;
+    color: #444;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pro_schwrap input {
+    margin-left: 8px;
+}
+
+.pro_schwrap .sch_ip .txt {
+    margin-top: 22px;
+    color: #444;
+    font-size: 13px;
+    text-align: center;
+}
+
+element.style {
+    color: #d04001;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+}
+
+.myptab {
+    width: 103%;
+}
+
+.myptab:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    position: relative;
+}
+
+.myptab > li {
+    float: left;
+    margin-left: -1px;
+}
+
+.myptab > li > span {
+    display: block;
+    position: relative;
+    top: 0;
+    z-index: 0;
+}
+
+.myptab > li > span.active {
+    z-index: 1;
+}
+
+.invisible {
+    position: absolute;
+    text-indent: -5000px;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.myptab > li > span a {
+    display: block;
+    width: 136px;
+    padding: 16px 0 15px;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid #dfdfdf;
+    border-bottom: 1px solid #397ca8;
+    color: #666;
+    background: #fff;
+    z-index: 0;
+}
+
+.myptab > li > span.active a, .myptab > li > span a:hover, .myptab > li > span a:active, .myptab > li > span a:focus {
+    display: block;
+    width: 136px;
+    padding: 15px 0 15px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #222;
+    border-top: 3px solid #666;
+    border-left: 1px solid #397ca8;
+    border-right: 1px solid #397ca8;
+    border-bottom: 0;
+    background: #fff;
+    z-index: 1;
+}
+
+.myptab.typ3 > li > span a {
+    width: 239px;
+}
+
+.tblwrap {
+    clear: both;
+    position: relative;
+}
+
+.prod_list {
+    margin-bottom: 20px;
+}
+
+.prod_list:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.prod_list li {
+    float: left;
+    margin: 0 15px 30px 0;
+}
+
+.prod_list .prod_box {
+    display: block;
+    position: relative;
+    width: 203px;
+    height: 284px;
+    border: 1px solid #e9e9e9;
+    padding: 10px 10px 35px;
+    box-shadow: none;
+}
+
+.prod_list .prod_box > .img {
+    width: 165px;
+    height: 165px;
+    padding: 20px;
+    margin: 0 auto;
+    background: url(/_ui/desktop/common/images/gscvs/products/prd_no_img.gif) 50% 50% no-repeat;
+}
+
+.prod_list .prod_box > .img img {
+    width: 165px;
+    height: 165px;
+}
+
+.prod_list .prod_box > .tit {
+    margin: 10px 15px 0;
+    height: 35px;
+    font-size: 14px;
+    color: #222;
+    line-height: 18px;
+}
+
+.prod_list .prod_box > .price {
+    margin: 15px 15px 0;
+}
+
+.prod_list .prod_box > .price .cost {
+    font-size: 18px;
+    color: #222;
+    font-weight: bold;
+}
+
+.prod_list .prod_box > .price .cost span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.prod_list .flag_box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+}
+
+.flag_box .flg01 {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+    background: url(http://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/products/flag_bg.png) 0 0 no-repeat;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 18px;
+}
+
+.flag_box span {
+    display: block;
+    padding: 16px 3px 0 0;
+    margin-left: 2px;
+}
+
+.paging {
+    position: relative;
+    padding: 18px 21px 16px;
+    background: #fbfbfb;
+    border: 1px solid #dfdfdf;
+    text-align: center;
+    line-height: normal;
+}
+
+.paging .prev2 {
+    left: 20px;
+    width: 12px;
+    background-position: 0 -60px;
+}
+
+.paging a {
+    font-size: 13px;
+    color: #666666;
+    line-height: 13px;
+}
+
+.paging > a {
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    display: inline-block;
+    height: 11px;
+    text-indent: -999em;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/icon_paging.png) no-repeat;
+}
+
+.paging .prev {
+    left: 47px;
+    width: 45px;
+    background-position: 0 0;
+}
+
+.paging .num a:hover, .paging .num a.on {
+    color: #222222;
+    text-decoration: underline;
+}
+
+.paging .num a {
+    display: inline-block;
+    padding: 0 7px;
+}
+
+.paging .next {
+    margin-top: -8px;
+    right: 47px;
+    width: 45px;
+    background-position: 0 -15px;
+}
+
+.ft .ft_menu li:first-child {
+    padding-left: 0;
+}
+
+.ft .ft_menu li {
+    float: left;
+    font-size: 13px;
+    color: #666;
+    padding-left: 12px;
+}
+
+.ft .ft_menu {
+    width: 610px;
+    float: left;
+    /* padding: 25px 0px 36px 0px; */
+    height: 60px;
+    line-height: 60px;
+}
+
+element.style {
+    overflow: hidden;
+    width: 178px;
+    height: 284px;
+    position: absolute;
+    left: -1px;
+    top: -285px;
+    display: none;
+}
+
+element.style {
+    display: block;
+}
+
+.ft {
+    width: 960px;
+    margin: 0 auto;
+    height: 60px;
+}
+
+.ft .ft_menu li:first-child a {
+    background: none;
+    padding-left: 0;
+}
+
+.ft .ft_menu li a {
+    color: #333;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/bg_sns.gif) no-repeat top left;
+    padding-left: 12px;
+}
+
+.ft:after, .ft .ft_menu ul:after {
+    content: '.';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.ft .ret_link dl {
+    float: left;
+}
+
+.ft .family {
+    position: relative;
+    width: 131px;
+    border-left: 1px solid #e8e8e8;
+    padding: 25px 20px 19px 25px;
+    cursor: pointer;
+}
+
+.ft .family dt, .ft .brand dt {
+    float: left;
+    color: #222;
+    width: 100%;
+}
+
+.brdwrap .brd {
+    float: left;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/menu_brd.gif) no-repeat;
+    width: 404px;
+    height: 43px;
+    margin-top: 40px;
+}
+
+.brdwrap .brd li {
+    position: relative;
+    float: left;
+}
+
+.brdwrap .brd .brd_rtl a {
+    width: 77px;
+    height: 43px;
+}
+
+.brdwrap .brd .brd_rtl a:hover, .brdwrap .brd .brd_rtl a.on {
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/menu_brd.gif) no-repeat;
+    background-position: 0px -57px;
+}
+
+/*company info*/
+.cpinfo {
+    position: fixed;
+    width: 100%; 
+    background: url(/_ui/desktop/common/images/gsretail/common/bg_cpinfo.gif) no-repeat #f7f7f7;
+    min-width: 960px;
+    height: 380px; 
+    background-position: 50% 50%;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.cbp-spmenu-horizontal {
+    width: 100%;
+    height: 410px;
+    left: 0;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+.cbp-spmenu-top {
+    top: -410px;
+}
+
+.cpmenu li h3 {
+    padding: 20px 0 20px 10px;
+}
+
+.cpmenu li h3 {
+    font-size: 16px;
+    color: #222;
+    padding-bottom: 10px;
+}
+
+
+.cpmenu li a {
+    padding-left: 20px;
+    font-size: 14px;
+    color: #444;
+    line-height: 24px;
+    background: url(/_ui/desktop/common/images/gsretail/common/ico_ball2.gif) 10px 5px no-repeat;
+}
+
+.btn_com {
+    position: relative;
+    cursor: pointer;
+    float: right;
+    width: 64px;
+    padding: 6px 0px;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+    background: #fff;
+    color: #0072bc;
+    font-size: 11px;
+}
+
+.cpmenu li ul {
+    margin-bottom: 20px;
+}
+
+.push-body {
+    /* overflow-x: hidden; */
+    position: relative;
+    left: 0;
+    z-index: 99;
+}
+
+.cpmenu > ul > li {
+    display: table-cell;
+    width: 190px;
+    padding: 5px 20px 0 20px;
+    border-right: 1px solid #dfdfdf;
+}
+
+.cpmenu > ul > li:first-child {
+    border-left: 1px solid #dfdfdf;
+}
+
+.popup-outer-layer {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.cpinfo, .push-body {
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+.popup-outer-layer .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+    filter: alpha(opacity = 50);
+}
+
+.pop-inner-layer {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 410px;
+    height: auto;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.paging .next2 {
+    margin-top: -8px;
+    right: 20px;
+    width: 12px;
+    background-position: 0 -73px;
+}
+
+.ftwrap {
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+}
+
+.btm_sns_warp {
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+    height: 72px;
+    line-height: 72px;
+}
+
+.ft .brand ul li.line_clamp a {
+    display: block;
+    padding: 7px 16px 10px 16px;
+    line-height: 16px;
+    background: url(/_ui/desktop/common/images/gsretail/common/icon_ft.png) no-repeat;
+    background-position: 142px 10px;
+    margin-left: 2px;
+}
+
+.ft .brand ul li a {
+    display: block;
+    width: 135px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 16px 0 16px;
+    background: url(/_ui/desktop/common/images/gscvs/common/icon_ft.png) no-repeat;
+    background-position: 142px 5px;
+    margin-left: 2px;
+}
+
+.gnbwrap .logo {
+    float: left;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/logo.gif) no-repeat;
+    width: 170px;
+    height: 46px;
+    text-indent: -999em;
+    margin: 20px 0px 6px 10px;
+}
+
+.gnbwrap .gnb .skyscraper {
+    position: absolute;
+    left: 50%;
+    margin-top: -44px;
+    margin-left: 523px;
+    z-index: 8;
+}
+
+.gnbwrap .gnb .skyscraper a {
+    display: block;
+    background: url(https://hpimg.gsretail.com/images/gs25/thumnail/gs25_youtube_sky.png) no-repeat;
+    width: 125px;
+    height: 124px;
+}
+
+.gnbwrap .gnb > ul {
+    width: 820px;
+}
+
+.gnbwrap .gnb > ul > li {
+    float: left;
+    padding: 0px 19px;
+}
+
+.gnbwrap {
+    clear: both;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    font-family: 'NanumBarunGothic', NanumBarunGothic;
+}
+
+.gnbw {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.gnbwrap .gnb li h2 > a {
+    display: block;
+    color: #333333;
+    padding: 34px 13px 29px 13px;
+    font-size: 20px;
+}
+
+.gnbwrap .gnb li h2 > a:hover {
+    border-bottom: 3px solid #338ec9;
+    color: #0072bc;
+    padding: 34px 13px 26px 13px;
+}
+
+.mlb_cnt {
+    position: absolute;
+    top: 86px;
+    left: 0;
+    z-index: 999;
+    width: 960px;
+    height: 294px;
+    overflow: hidden;
+    background: #f7f7f7;
+    border-right: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+}
+
+.mlb_ani > li.ico_cvs_bg1 {
+    background: url(/_ui/desktop/common/images/gscvs/common/gnb_cvs_ico1.png) no-repeat 64px 188px;
+}
+
+.mlb_cnt > li:first-child {
+    width: 239px;
+}
+
+.brdwrap .brd a {
+    display: block;
+    text-indent: -999em;
+}
+
+.brdwrap .brd .brd_gs25 a:hover, .brdwrap .brd .brd_gs25 a.on {
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/menu_brd.gif) no-repeat;
+    background-position: -77px -57px;
+}
+
+.brdwrap .brd .brd_gsshop a {
+    width: 84px;
+    height: 43px;
+}
+
+.brdwrap .brd .brd_gsshop a:hover, .brdwrap .brd .brd_gsshop a.on {
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/menu_brd.gif) no-repeat;
+    background-position: -142px -57px;
+}
+
+.brdwrap .brd .brd_gsssm a {
+    width: 114px;
+    height: 43px;
+}
+
+.brdwrap .brd .brd_gsssm a:hover, .brdwrap .brd .brd_gsssm a.on {
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/menu_brd.gif) no-repeat;
+    background-position: -225px -57px;
+}
+
+.brdwrap .brd .brd_gspop a {
+    width: 65px;
+    height: 43px;
+}
+
+.brdwrap .brd .brd_gspop a:hover, .brdwrap .brd .brd_gspop a.on {
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/menu_brd.gif) no-repeat;
+    background-position: -343px -57px;
+}
+
+.brdwrap .right_brd ul li {
+    float: left;
+    padding-left: 18px;
+}
+
+.brdwrap .uty li:first-child {
+    padding-left: 0px;
+    background: none;
+}
+
+.cpmenu > ul {
+    display: table;
+}
+
+.header {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.brdwrap .uty li a.lang {
+    position: relative;
+    z-index: 7777;
+    display: block;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/icon_lang.png) no-repeat;
+    background-position: right 1px;
+    padding-right: 18px;
+}
+
+.brdwrap .uty .langwrap {
+    position: absolute;
+    top: -9px;
+    left: 0;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/lang_bg.png) no-repeat;
+    width: 153px;
+    height: 112px;
+    z-index: 6666;
+}
+
+.brdwrap .uty .langwrap > ul {
+    margin-top: 38px;
+}
+
+.brdwrap .uty .langwrap > ul > li {
+    float: none;
+    background: none;
+    padding-left: 0px;
+    margin: 0;
+}
+
+.brdwrap .uty .langwrap > ul > li a {
+    display: block;
+    background: url(/_ui/desktop/common/images/gscvs/common/icon_lang.png) no-repeat;
+    background-position: right -65px;
+    font-size: 12px;
+    color: #666;
+    padding: 10px 12px 3px;
+    width: 125px;
+    height: 23px;
+    margin-left: 2px;
+}
+
+.brdwrap .uty .langwrap > ul > li a span {
+    position: absolute;
+    top: 12px;
+    left: 78px;
+}
+
+.brdwrap .right_brd {
+    float: right;
+    margin-top: 23px;
+}
+
+element.style {
+    width: 51px;
+}
+
+.cpmenu .cpmenu_vt4 ul > li:first-child li, .cpmenu .cpmenu_vt4 ul li li:first-child {
+    height: inherit;
+}
+
+.btn_cls {
+    width: 960px;
+    margin: 0 auto;
+    text-align: right;
+    left: 50%;
+    position: absolute;
+    margin-left: -480px;
+    top: 0;
+}
+
+.gnbwrap .logo a {
+    width: 70%;
+    height: 100%;
+    display: block;
+}
+
+.gnbwrap .gnb {
+    float: left;
+    margin: 0 auto;
+    width: 780px;
+}
+
+element.style {
+    top: 1px;
+    left: 0px;
+    transform: matrix(1, 0, 0, 1, 0, 285);
+}
+
+.ft .family ul {
+    position: absolute;
+    background: #fff;
+    top: -284px;
+    left: -1px;
+    border: 1px solid #e8e8e8;
+    padding: 16px 0px;
+}
+
+.ft .ret_link {
+    float: right;
+    font-size: 13px;
+    color: #333;
+}
+
+.btm_sns_area .left {
+    float: left;
+    width: 616px;
+    height: 72px;
+}
+
+.btm_sns_area .btm_sns ul li {
+    float: left;
+    padding-right: 15px;
+    margin-top: -4px;
+}
+
+.btm_sns_area .btm_sns ul li a.kakaoplus {
+    background-position: -241px 0;
+}
+
+.btm_sns_area .btm_sns ul li a {
+    display: block;
+    width: 39px;
+    height: 39px;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/main/ico_btm_sns.png) no-repeat left center;
+}
+
+.btm_sns_area {
+    width: 960px;
+    margin: 0 auto;
+    height: 72px;
+    line-height: 72px;
+}
+
+.btm_sns_area .btm_sns ul li a.blog {
+    background-position: -48px 0;
+}
+
+.btm_sns_area .btm_sns ul li a.instagram {
+    background-position: -96px 0;
+}
+
+.btm_sns_area .btm_sns ul li a.youtube {
+    background-position: -192px 0;
+}
+
+.btm_sns_area .btm_sns ul li a.youtube {
+    background-position: -192px 0;
+}
+
+.btm_sns_area .btm_sns ul li a .hide {
+    display: block;
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.layer {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8000;
+}
+
+.ft .family dt span, .ft .brand dt span {
+    float: right;
+    width: 100%;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/ico_style.png) no-repeat;
+    background-position: -28px 0px;
+    text-indent: -999em;
+    font-size: 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.ft .family ul li a {
+    display: block;
+    width: 158px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 0 0 16px;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/icon_ft.png) no-repeat;
+    background-position: 141px 5px;
+    margin-left: 2px;
+}
+
+element.style {
+    overflow: hidden;
+    width: 171px;
+    height: 184px;
+    position: absolute;
+    left: -1px;
+    top: -185px;
+    display: none;
+}
+
+element.style {
+    top: 1px;
+    left: 0px;
+    transform: matrix(1, 0, 0, 1, 0, 185);
+}
+
+.ft .brand ul {
+    position: absolute;
+    background: #fff;
+    top: -184px;
+    left: -1px;
+    border: 1px solid #e8e8e8;
+    padding: 16px 0px;
+}
+
+.btm_sns_area .btm_sns {
+    float: left;
+    width: 617px;
+    height: 39px;
+    padding-top: 20px;
+}
+
+#accessibility {
+    position: relative;
+    width: 100%;
+    top: -1px;
+    left: 0;
+    z-index: 10000;
+}
+
+#accessibility a, #accessibility a:link {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 0 0 -1px 0;
+    font-size: 14px;
+    text-decoration: none;
+    overflow: hidden;
+    opacity: 0.85;
+    -ms-filter: alpha(opacity = 85);
+    filter: alpha(opacity = 85);
+    -moz-opacity: 0.2;
+}
+
+.ft .brand {
+    position: relative;
+    width: 120px;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    padding: 25px 20px 19px 25px;
+}
+
+.lctwrap .lct .lct_lst {
+    display: inline-block;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/common/icon_nav.png) no-repeat;
+    background-position: 6px -168px;
+    text-indent: -999em;
+    width: 20px;
+    height: 20px;
+}
+
+element.style {
+    display: block;
+    -webkit-user-select: none;
+    margin: auto;
+    background-color: hsl(0, 0%, 90%);
+    transition: background-color 300ms;
+}
+
+element.style {
+    margin: 0px;
+    height: 100%;
+    background-color: rgb(14, 14, 14);
+}
+
+.brdwrap .brd .brd_gs25 a {
+    width: 64px;
+    height: 43px;
+}
+
+.cpinfo .cpmenu {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.md_controller .btn.stop {
+    position: absolute;
+    top: -37px;
+    right: 78px;
+    width: 34px;
+    height: 34px;
+    background-position: 0 0;
+}
+
+.md_controller .btn.play {
+    position: absolute;
+    top: -37px;
+    right: 78px;
+    width: 34px;
+    height: 34px;
+    background-position: -66px 0;
+}
+
+.md_controller .btn.next {
+    position: absolute;
+    top: -37px;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    background-position: -66px -306px;
+}
+
+.paging .num {
+    font-size: 13px;
+    color: #666666;
+}
+
+.copywrap .copy {
+    float: left;
+    width: 790px;
+    padding-bottom: 80px;
+}
+
+.copy .copy_menu {
+    width: 840px;
+    margin-bottom: 35px;
+}
+
+.copy .copy_menu li {
+    float: left;
+    font-size: 11px;
+    color: #666;
+}
+
+.copy .copy_menu li a {
+    padding: 0 8px;
+    background: url(https://hpimg.gsretail.com/_ui/desktop/common/images/gscvs/common/bg_sns.gif) no-repeat center left;
+}
+
+.copy .copy_menu li:first-child a {
+    padding: 0 10px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+    background: none;
+}
+
+.copy .copy_menu li a, .copy .copy_menu li a:hover {
+    display: block;
+    font-size: 11px;
+    color: #666;
+}
+
+.copy .copy_menu li.bold a {
+    font-weight: bold;
+    color: #666;
+    font-size: 12px;
+    margin-top: -1px;
+}
+
+.copy_txt {
+    font-size: 11px;
+    color: #666;
+    line-height: 20px;
+}
+
+.copywrap .ft_banner li {
+    float: left;
+    padding-left: 10px;
+}
+
+.copywrap .ft_banner li:first-child {
+    padding-left: 0;
+}
+
+.copywrap .ft_banner {
+    position: absolute;
+    right: 0;
+    top: 34px;
+}
+
+.copywrap {
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 40px;
+    position: relative;
+}
+
+.prod_box > .img img {
+    width: 246px;
+    height: 269px;
+}
+
+.ft .family dt a {
+    display: block;
+}
+
+.btm_sns_area .btm_sns > img {
+    float: left;
+    padding: 4px 16px 0 0;
+}
+
+.cpmenu .dotline {
+    border-bottom: 1px dotted #dfdfdf;
+}
+
+.cpmenu li li h3 a {
+    display: block;
+    font-size: 16px;
+    color: #222;
+    padding: 0 0 5px 0;
+    background: none;
+}
+
+.gnbw:after, .gnbwrap .gnb ul:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.dsp_non {
+    display: none;
+}
+
+.mlb_ani, .gnb_bg {
+    display: none;
+}
+
+.mlb_ani > li {
+    position: relative;
+    float: left;
+    width: 239px;
+    height: 294px;
+    border-left: 1px solid #e8e8e8;
+}
+
+.mlb_ani > li > a {
+    display: block;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.mlb_cnt .tltwrap {
+    width: 190px;
+    display: block;
+}
+
+.mlb_tlt {
+    font-size: 17px;
+    color: #333;
+    padding: 24px 0px 16px 0px;
+    display: block;
+}
+
+.mlb_txt {
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    display: block;
+}
+
+.mlb_ani > li.ico_cvs_bg1_n01 {
+    background: url(/_ui/desktop/common/images/gscvs/common/gnb_cvs_ico1_n01.png) no-repeat 141px 151px;
+}
+
+.mlb_cnt > li+li {
+    width: 239px;
+    height: 294px;
+}
+
+.mlb_ani > li.ico_cvs_bg_simply {
+    background: url(/_ui/desktop/common/images/gscvs/common/ico_cvs_bg_simply.png) no-repeat 70px 230px;
+}
+
+.mlb_cnt > li+li+li {
+    position: absolute;
+    left: 479px;
+    top: 0;
+    width: 239px;
+    height: 294px;
+}
+
+.mlb_ani > li.ico_cvs_bg1_n02 {
+    background: url(/_ui/desktop/common/images/gscvs/common/gnb_cvs_ico1_n02.png) no-repeat 147px 200px;
+}
+
+.mlb_cnt > li+li+li+li {
+    position: absolute;
+    left: 720px;
+    top: 0;
+    width: 239px;
+    height: 294px;
+}
+
+.mlb_cnt2 {
+    position: absolute;
+    top: 86px;
+    left: 0;
+    z-index: 999;
+    width: 960px;
+    height: 294px;
+    overflow: hidden;
+    background: #f7f7f7;
+    border-right: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+}
+
+.mlb_cnt2>li {
+    height: 294px;
+    top: 0;
+    left: 0;
+    background: url(/_ui/desktop/common/images/gscvs/common/gnb_ico4.png) no-repeat 379px 206px;
+    width: 479px;
+}
+
+.mlb_cnt2>li+li {
+    height: 294px;
+    position: absolute;
+    left: 480px;
+    top: 0;
+    background: url(/_ui/desktop/common/images/gscvs/common/gnb_ico5.png) no-repeat 139px 206px;
+    width: 239px;
+}
+
+.mlb_cnt2>li+li+li {
+    height: 294px;
+    top: 0;
+    left: 720px;
+    position: absolute;
+    background: url(/_ui/desktop/common/images/gscvs/common/mlb_cnt2_ico03.png) no-repeat 156px 212px;
+}
+
+.mlb_cnt3 {
+    position: absolute;
+    top: 86px;
+    left: 0;
+    z-index: 999;
+    width: 960px;
+    height: 294px;
+    overflow: hidden;
+    background: #f7f7f7;
+    border-right: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+}
+
+.ft_copy {
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+    background: #f2f2f2;
+}
+
+.layer .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+    filter: alpha(opacity = 50);
+    z-index: 10;
+}
+
+.pop-layer {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    z-index: 50;
+}
+
+element.style {
+    margin: 0px;
+    height: 100%;
+    background-color: blue(14, 14, 14);
+}
+
+element.style {
+    display: block;
+    -webkit-user-select: none;
+    margin: auto;
+    cursor: zoom-in;
+    background-color: hsl(0, 0%, 90%);
+}
+
+img[Attributes Style {
+    width: 217px;
+    aspect-ratio: auto 217 / 55;
+    height: 55px;
+}
+
+head {
+    display: none;
+}
+
+.noti_add0818 {
+    position: absolute;
+    right: 0;
+    top: -33px;
+    color: #397ca8;
+    font-size: 14px;
+}
+
+.paging .prev {
+    left: 47px;
+    width: 45px;
+    background-position: 0 0;
+}
+
+.brdwrap .uty li a.lang:hover, .brdwrap .uty li a.on {
+    display: block;
+    background: url(/_ui/desktop/common/images/gscvs/common/icon_lang.png) no-repeat;
+    background-position: right -23px;
+    padding-right: 18px;
+}
+
+.container .heroes .hero:hover {
+    background-color: blue;
+    transform: skewX(-14deg) scale(1.5);
+    z-index: 1;
+}

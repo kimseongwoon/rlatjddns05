@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    div {
+      margin-bottom: 20px;
+    }
+    button {
+      border-radius: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+    .disabled {
+      color: #ccc;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+    .enabled {
+      color: #fff;
+      background-color: #007bff;
+      border: 1px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <label>
+      <input type="checkbox" id="agree">필수 항목 동의
+    </label>
+  </div>
+  <div>
+    <button id="proceed" disabled>다음으로 진행</button>
+  </div>
+
+  <script>
+    // 처음에 html파일이 로드될 때
+    document.addEventListener('DOMContentLoaded', function() {
+      const checkbox = document.querySelector('#agree');
+      const proceedButton = document.querySelector('#proceed');
+
+      // 체크 상태가 변경되었을 때
+      // checkbox.addEventListener('change', function() {
+      //   if(this.checked) { // 체크박스에 체크가 되었을 때
+      //     proceedButton.classList.remove('disabled')
+      //     proceedButton.classList.add('enabled');
+      //     proceedButton.disabled = false;
+      //   } else {           // 체크박스에 체크가 해제 되었을 때  
+      //     proceedButton.classList.remove('enabled')
+      //     proceedButton.classList.add('disabled');
+      //     proceedButton.disabled = true;
+      //   }
+      // });
+
+      checkbox.addEventListener('change', function() {
+        proceedButton.classList.toggle('enabled', this.checked);
+        proceedButton.classList.toggle('disabled', !this.checked);
+        proceedButton.disabled = !this.checked;
+      });
+    });
+  </script>
+</body>
+</html>

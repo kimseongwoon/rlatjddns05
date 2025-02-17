@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+     * 요소 상태에 따른 가상 클래스
+     *   (1) :target -> 앵커 대상(#이름)에 스타일 적용
+     *   (2) :enabled, :disabled -> 해당 요소가 사용중 혹은 미사용중일 때 각각 스타일 적용 
+     *   (3) :checked -> 라디오(<input type="radio") 혹은 체크박스버튼(<input type="checkbox")이 체크되어 있는 경우 스타일 적용
+     *  cf) :not -> 특정 요소를 제외하고 스타일 적용
+     */
+    #intro:target {  /* 앵커 대상이 intro인 거 */
+      color: red;
+    }
+    textarea:enabled {
+      background-color: orange;
+    }
+    textarea:disabled {
+      background-color: green;
+    }
+    input:checked + label {  /* 라디오 혹은 체크박스 중에서 체크가 된 요소의 label 스타일을 적용 */
+      color: red;
+    }
+    input:not([type="radio"]) + span { /* == input[type="checkbox"] + span*/
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navi">
+      <ul>
+        <li><a href="#intro">이용 안내</a></li>
+        <li><a href="#">객실 소개</a></li>
+        <li><a href="#">예약 방법 및 요금</a></li>
+        <li><a href="#">예약하기</a></li>
+      </ul>
+    </nav>  
+    <form>
+      <textarea disabled>글자 상자</textarea>
+      <br>
+      <input type="radio" name="room" id="basic" checked/><label for="basic">기본형(최대 2인)</label>
+      <input type="radio" name="room" id="family" /><label for="family">가족형(최대 8인)</label>
+      <br>
+      옵션: 
+      <input type="checkbox" name="option" />세탁기
+      <input type="checkbox" name="option" />전자레인지
+    </form>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div id="intro">
+    <h2>이용 안내</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quisquam culpa exercitationem ipsam inventore in odit perferendis provident a ad eum iste odio dolore aut modi asperiores nemo, eveniet beatae!</p>
+  </div>
+</body>
+</html>

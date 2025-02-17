@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      text-align: center;
+    }
+    h1::before {  /* h1태그의 앞에 컨텐츠 삽입 */
+      content: "*";
+      color: red;
+      margin-right: 5px;
+    }
+    h1::after {  /* h1태그의 뒤에 컨텐츠 삽입 */
+      content: "🎉";
+      color: red;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CSS 가상요소</h1>
+    <p>가상 요소를 사용하면 시각적 변화를...</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+D:\240507-edu1\full-stack1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1050451010.index
+\starbucks-homepage1\src\main\java

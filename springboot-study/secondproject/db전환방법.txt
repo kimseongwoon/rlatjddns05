@@ -1,0 +1,5 @@
+1. build.gradle 필요한 라이브러리를 세팅
+2. build.gradle에서 세팅한 대로 applitcation.properties 혹은 
+   application.yml에도 추가적인 세팅
+3. java에서 config작업(DB or Web or 기타 등등)
+4. jpa를 config작업했다면 관련된 entity java파일을 생성

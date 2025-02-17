@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 현재 주축은 x축 */
+    .container2 {
+      width: 400px;
+      height: 300px;
+      display: flex;
+      background-color: #eee;
+      border: 1px solid #222;
+      flex-wrap: wrap;
+      margin: 30px;
+    }
+    .container2 .box {
+      padding: 5px 45px;
+      margin: 5px;
+      width: 40px;
+      /* background-color: red; */
+    }
+    /* align-content은 여러줄일때 교차축 정렬 지정 */
+    #opt1 {
+      align-content: flex-start;  /* 교차축의 시작점 기준 */
+    }
+    #opt2 {
+      align-content: flex-end;  /* 교차축의 끝점 기준 */
+    }
+    #opt3 {
+      align-content: center;  /* 교차축의 중앙 기준 */
+    }
+    #opt4 {
+      align-content: space-between;   /* 시작점과 끝점 배치 후 중간 항목은 같은 간격으로 배치 */    
+    }
+    #opt5 {
+      align-content: space-around;    /* 전체 항목을 같은 간격으로 배치 */  
+    }
+    #opt6 {
+      align-content: stretch;         /* 항목을 늘려 교차축에 가득 차게 배치 */
+    }
+    p {
+      text-align: center;
+    }
+    /* box클래스를 가진 것의 홀수번째 상자에 css 적용 */
+    .box:nth-child(odd) {
+      background-color: rgb(255, 187, 0);
+    }
+    .box:nth-child(even) {
+      background-color: rgb(35, 220, 35);
+    }
+  </style>
+</head>
+<body>
+  <div class="container2" id="opt1">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+  </div>
+  <div class="container2" id="opt2">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+  </div>
+  <div class="container2" id="opt3">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+  </div>
+  <div class="container2" id="opt4">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+  </div>
+  <div class="container2" id="opt5">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+  </div>
+  <div class="container2" id="opt6">
+    <div class="box"><p>1</p></div>
+    <div class="box"><p>2</p></div>
+    <div class="box"><p>3</p></div>
+    <div class="box"><p>4</p></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../static/css/natural.css">      
+</head>
+<body>
+    <div class="container">
+        <div class="inner">
+            <h1 class="logo_natural_yak">
+                <a href="http://natural_yak.com" class="link">
+                    <span class="blind">Natural_Yak</span>
+                </a>
+            </h1>
+            <div class="content">
+                <form id="join" method="post" action="/user2/join/end" class="form">
+                    <div class="form_content">
+                        <div class="form_setion">
+                    </div>
+                    <div class="form_list">
+                        <div class="form_item user" id="divld">
+                            <input type="text" id="id" name="id" placeholder="아이디" class="input" value="" maxlength="20" autocapitalize="off">
+                    </div>
+                    <div class="form_item lock password" id="divPasswd">
+                        <input type="password" id="pswd1" name="pswd1" placeholder="비밀번호" class="input" value maxlength="20" autocomplete="new-password">
+                    <div class="password_info">
+                        <em class="how_secure" id="secureLevel"></em>
+                    </div>
+                    </div>
+                </div>
+                <div class="form_list">
+                    <div class="form_item user" id="divName">
+                        <input type="text" id="name" name="name" placeholder="이름" class="input" value maxlength="40">
+                    </div>
+                    </div>
+                </div>
+                <div class="btn_submlt_wrap" id="divBtnJoin" style="display: none;"></div>
+                    <input type="button" value="가입하기" onclick="window.open('notice.html', '_blank', 'width=300,height=400')">
+                
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

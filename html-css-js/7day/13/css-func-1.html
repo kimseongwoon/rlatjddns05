@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {  /* css변수 이름 --bg-color 선언 */
+      --bg-color: red;
+    }
+    body {
+      background-color: var(--bg-color); /* var()함수 css변수와 함께 사용 */
+    }
+    nav {
+      width: calc(100% - -80px);  /* 창의 너비 크기 값에 80px 뺀 값(사칙연산 사용 가능) */ 
+      height: 100px;
+      border: 3px solid black;
+    }
+    section {
+      width: min(100%, 700px);    /* 창의 너비 크기 값과 700px값 중 작은 값이 세팅 */
+      height: 100px;
+      border: 3px solid black;
+    }
+    footer {
+      width: clamp(10rem, 200vw, 20rem);  /* 10rem(160px)과 20rem(320px)사이 값 중에서 200vw로 세팅 */
+      height: 100px;
+      border: 3px solid black;
+    }
+  </style>
+</head>
+<body>
+  <nav></nav>
+  <section></section>
+  <footer></footer>
+</body>
+</html>

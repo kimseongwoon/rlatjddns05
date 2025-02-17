@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+     * 가상 클래스 문법 -> :가상클래스이름
+     *   (1) :link -> 방문하지 않은 링크에 스타일 적용(a태그에서 많이 사용)
+     *   (2) :visited -> 방문한 링크에 스타일 적용(a태그에서 많이 사용)
+     *   (3) :hover -> 특정 요소에 마우스 포인터 올리면 스타일 적용(아주 많이 사용)
+     *   (4) :active -> 웹 요소를 활성화했을 때 스타일 적용
+     *   (5) :focus -> 웹 요소에 초점이 맞추어졌을 때 스타일 적용
+     */
+     .navi a:link {
+       color: red;
+     }
+     .navi a:visited {
+       color: orange;
+     }
+     .navi a:hover {
+       color: black;
+     }
+     .navi a:active { /* 마우스를 계속 클릭을 유지하는 경우 */
+       color: green;
+     }
+     .navi a:focus {  /* tab키를 눌렀을 때 focus되는 경우 */
+       color: violet;
+     }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navi">
+      <ul>
+        <li><a href="#">이용 안내</a></li>
+        <li><a href="#">객실 소개</a></li>
+        <li><a href="#">예약 방법 및 요금</a></li>
+        <li><a href="#">예약하기</a></li>
+      </ul>
+    </nav>  
+  </div>
+</body>
+</html>

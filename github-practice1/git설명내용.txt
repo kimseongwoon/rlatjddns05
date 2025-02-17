@@ -1,0 +1,30 @@
+git add . -> 현재 바뀐 파일들을 전부 staged영역으로 바꾸어줌
+
+git log -> git 커밋한 내용들을 모두 볼 수 있는 명령어
+git log -숫자 -> 숫자 개수만큼 로그 보기
+git log --pretty=oneline
+
+git commit --amend -m '메시지 내용' -> 현재 HEAD에 있는 commit메시지를 변경
+git commit -a -m '메시지 내용' -> git add + git commit -m 기능
+
+branch
+
+master브랜치에 있는 test2.txt파일에서 각각의 merge-test1브랜치와 merge-test2브랜치를 만들어 충돌이 나게끔
+만들고 master브랜치에 merge-test1브랜치와 merge-test2브랜치를 merge를 해서 충돌을 해결하는 실습
+
+python-test1.py파일에 print('Hello3') 내용을 넣고 
+github repository에서 적용하기
+
+로컬 브랜치
+  git -> master이름의 브랜치가 기본 브랜치 -> master -> main
+원격 브랜치
+  github -> main이름의 브랜치가 기본 브랜치 -> main -> master
+
+로컬에서 원격 브랜치 만드는 방법
+1. 로컬 브랜치 생성
+2. 로컬 브랜치로 체크아웃
+3. git push -u origin 로컬브랜치 이름
+4. 원격 브랜치 생성 확인 -> git branch -r
+
+-> dev1 브랜치라는 이름으로 로컬과 원격(github)지에 브랜치를 만들고
+    삭제하는 실습

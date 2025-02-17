@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+     * 미디어 쿼리 -> @media : 브라우저 크기에 따라 반응을 지원하는 css 기능
+     *   @media [only | not] 미디어유형(ex) all, screen, print etc) [and조건(해상도크기)] * [and조건(해상도크기)]
+     */
+     /* 768px크기에서 1439px사이일 때 적용하는 CSS(태블릿일 때 많이 사용) */
+     @media all and (min-width: 768px) and (max-width: 1439px) {
+       p {
+         font-size: 40px;
+       }
+     }
+     /* 768px크기이하 일때 적용하는 CSS(모바일일 경우 많이 사용) */ 
+     @media all and (max-width: 768px) {
+       p {
+         font-size: 8px;
+       }
+     }
+     /* 가로 너비가 최소 1400px인 경우에 적용하는 CSS(PC일 경우 많이 사용) */
+     @media screen and (min-width: 1440px) {
+       
+     }
+     /* 화면이 세로 크기(portrait)일 때 CSS 적용 */
+     @media (orientation: portrait) {
+       h1 {
+         background-color: red;
+       }
+     }
+
+     /* 세로 방향이면서 화면 너비가 600px미만일 때 */
+     @media (orientation: portrait) and (max-width: 599px) {
+       h2 {
+         background-color: blue;
+       }
+     }
+  </style>
+</head>
+<body>
+  <p>안녕하세요</p>
+  <h1>안녕하세요</h1>
+  <h2>안녕하세요</h2>
+</body>
+</html>

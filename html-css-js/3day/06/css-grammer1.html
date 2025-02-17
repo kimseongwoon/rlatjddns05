@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style1.css" />
+  <!--
+     CSS 사용하는 방법
+       1. 일반 태그에 style속성으로 이용하기(인라인(inline) 스타일)
+          ex) <div style=""></div>
+       2. style 태그 사용하기(내부 스타일)
+          ex) <style>   </style>
+       3. 외부 파일로 사용하기(외부 스타일)
+          ex) <link rel="stylesheet" href="css소스">
+  -->
+  <!-- 내부 스타일 -->
+  <style>
+    /* 
+      css 주석
+      
+      css 기본형 -> css선택자(태그(div, span 등), class, id)
+                   {
+                      속성1: 속성값1;
+                      속성2: 속성값2;
+                   }
+                   ex1) p {      여러줄
+                          text-align: center;  수평중앙정렬
+                          color: blue;         색깔은 파란색
+                       }
+                   ex2) p { text-align: center; color: blue; }
+    */
+    h1 {
+      color: pink;
+    }
+
+    p {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <!-- 인라인 스타일 -->
+  <p style="color: block;">안녕하세요</p>
+  <!-- 내부 스타일 -->
+  <h1>안녕하세요</h1>
+  <!-- 외부 스타일 -->
+  <h2>안녕하세요</h2>
+</body>
+</html>

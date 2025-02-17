@@ -1,0 +1,253 @@
+.cont-tit {
+	color: blue;
+}
+
+.theater-specail-cont .tit-theater-special {
+    position: relative;
+    padding: 20px 0;
+    border: 1px solid #d8d9db;
+    text-align: center;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/bg/bg-box-slash.png);
+    border-radius: 10px;
+}
+
+.theater-specail-cont .tit-theater-special .tit em {
+    display: block;
+    padding: 0 0 10px 0;
+    font-size: 1.8666em;
+    color: #503396;
+    font-weight: 600;
+}
+
+
+.inner-wrap {
+    width: 1100px;
+    margin: 0 auto
+}
+
+tab-list:after,.tab-list:before {
+    content: '';
+    display: table
+}
+
+body {
+    overflow: auto;
+    overflow-y: scroll;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #444;
+    font-weight: 400;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif
+}
+
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+html {
+    -webkit-text-size-adjust: 100%
+}
+
+.tab-list>ul {
+    position: relative;
+    width: 100%;
+    height: 42px
+}
+
+.inner-wrap:after,.inner-wrap:before {
+    content: '';
+    display: table
+}
+
+.tab-list>ul>li:first-child:nth-last-child(2),.tab-list>ul>li:first-child:nth-last-child(2)~li {
+    width: 50%
+}
+
+#contents.no-padding.location-fixed {
+    padding-top: 42px
+}
+
+.tab-list>ul:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 1px;
+    background-color: #503396
+}
+
+ol,ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+.tab-list:after {
+    clear: both
+}
+
+.inner-wrap:after {
+    clear: both
+}
+
+.page-util .location a:before,.page-util .location span.no-link:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -14px;
+    top: 0;
+    width: 5px;
+    height: 42px;
+    background: url(https://img.megabox.co.kr/static/pc/images/common/bg/bg-location-arr.png) no-repeat left center
+}
+
+.theater-detail-page .theater-specail.db .name {
+    background-position: center 84px;
+    background-image: url(https://img.megabox.co.kr/static/pc/images/theater/bg-theater-db.png)
+
+}.theater-detail-page .theater-specail .name {
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    background-repeat: no-repeat
+}   
+
+.tab-list {
+    position: static;
+    width: 100%;
+    background-color: rgba(255,255,255)
+}
+
+.tab-list:after,.tab-list:before {
+    content: '';
+    display: table
+}
+
+.tab-list:after {
+    clear: both
+}
+
+.tab-list>ul {
+    position: relative;
+    width: 100%;
+    height: 42px
+}
+
+.tab-list>ul:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 1px;
+    background-color: #503396
+}
+
+.tab-list>ul>li {
+    float: left;
+    height: 42px;
+    margin: 0;
+    border: 1px solid #ebebeb;
+    border-width: 1px 0 1px 1px
+}
+
+.tab-list>ul>li:last-child {
+    border-right: 1px solid #ebebeb
+}
+
+.tab-list>ul>li.on {
+    border: 1px solid #503396;
+    border-bottom: 0
+}
+
+.tab-list>ul>li>a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 41px;
+    line-height: 40px;
+    padding: 0;
+    text-align: center;
+    color: #222;
+    font-size: 1.0667em;
+    text-decoration: none
+}
+
+.tab-list>ul>li>a.disabled {
+    color: #787878;
+    background-color: #f3f4f5
+}
+
+.tab-list>ul>li.on>a {
+    z-index: 3;
+    color: #503396;
+    background-color: #fff
+}
+
+.tab-list>ul>li.on>a:active,.tab-list>ul>li.on>a:focus,.tab-list>ul>li.on>a:hover,.tab-list>ul>li.on>a:visited {
+    color: #503396;
+    text-decoration: none
+}
+
+.tab-list>ul>li.on+li {
+    border-left: 0
+}
+
+.tab-list>ul>li:first-child:nth-last-child(1),.tab-list>ul>li:first-child:nth-last-child(1)~li {
+    width: 100%
+}
+
+.tab-list>ul>li:first-child:nth-last-child(2),.tab-list>ul>li:first-child:nth-last-child(2)~li {
+    width: 50%;
+}
+  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.centered-text {
+    text-align: center;
+}  
+
+.theater-specail-cont .cont-theater .cont-tit {
+    margin: 0 0 30px 0;
+    font-size: 1.4666em;
+    text-align: center;
+    line-height: 32px;
+    color: #503396
+}       
+
+.theater-specail-cont .section .bg-wrap.bg {
+    padding: 70px 0;
+    background-color: #f2f3f5
+}  
+
+.tab-list>ul>li.on>a:active,.tab-list>ul>li.on>a:focus,.tab-list>ul>li.on>a:hover,.tab-list>ul>li.on>a:visited {
+    color: #503396;
+    text-decoration: none
+}
+
+p {
+    font-weight: 500; /* 글자 두께를 중간 정도로 설정 */
+    font-size: 16px;  /* 글자 크기를 16px로 설정 */
+}														
+
+p {
+    line-height: 1.5; /* 줄 간격을 1.5배로 설정하여 글자를 더 깔끔하게 보이게 합니다 */
+}	
+
+p {
+    letter-spacing: 0.05em; /* 글자 사이의 간격을 약간 넓힙니다 */
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     .container {
+      width:800px;
+      height:100px;
+      display:flex;
+      border:1px solid #222;
+      gap: 10px;
+    }                               
+    .box {
+      flex-basis: 150px;  
+    }
+    .box:nth-child(odd) {
+      background-color: #ffc400;
+    }
+    .box:nth-child(even) {
+      background-color: #a6ff00;
+    }
+    p {
+      font-weight: bold;
+      text-align: center;
+    }
+    #box1 {
+      /* flex-grow의 기본값은 0 -> 증가 비율 없음 */
+      flex-grow: 1;  /* flex item의 증가 비율 1 */
+    }
+    #box2 {
+      flex-grow: 1;
+    }
+    #box3 {
+      flex-grow: 0;
+    }
+    #box4 {
+      flex-grow: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box" id="box1"><p>1</p></div>
+    <div class="box" id="box2"><p>2</p></div>
+    <div class="box" id="box3"><p>3</p></div>
+    <div class="box" id="box4"><p>4</p></div>
+  </div>        
+</body>
+</html>

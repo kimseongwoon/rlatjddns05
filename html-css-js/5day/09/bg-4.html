@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container{
+      width:1100px;
+      margin:50px auto;
+    }
+
+    .box{
+      float:left;
+      border:1px solid #222;
+      width:300px;
+      height:300px;      
+      margin:20px;
+      background:url('images/bg4.jpg') no-repeat left top;
+    }
+    /* Do it! #bg1 ~ #bg6 스타일을 사용해 배경 이미지 크기 조절하기 */
+    #bg1 {
+      background-size: auto; /* 원래 배경이미지만큼 표시 */
+    }
+    #bg2 {
+      background-size: 200px; /* 너비는 200px, 높이는 200px만큼 자동 계산 */
+    }
+    #bg3 { 
+      background-size: 50%; /* 너비 50%기준, 높이는 너비50%만큼 자동 계산 */
+    }
+    #bg4 {
+       background-size: 100% 100%; /* 박스요소의 너비와 높이를 박스 크기에 딱맞게 맞춤(100%) */
+    }
+    #bg5 {
+       backgrond-size: contain; /* 요소의 큰 길이만큼 배경 이미지가 다 보이게 표시 */
+    }
+    #bg6 {
+        background-size: cover; /* 요소가 다 덮힐수 있도록 배경 이미지 표시 */
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="box" id="bg1"></div>
+    <div class="box" id="bg2"></div>
+    <div class="box" id="bg3"></div>
+    <div class="box" id="bg4"></div>
+    <div class="box" id="bg5"></div>
+    <div class="box" id="bg6"></div>
+  </div>
+</body>
+</html>

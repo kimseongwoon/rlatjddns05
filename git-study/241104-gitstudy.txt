@@ -1,0 +1,116 @@
+git사용의 목적
+  1. 파일 및 폴더 변경 사항 관리
+  2. 팀 개발 협업 관리
+
+
+취업 -> 개발자 취업 -> 1인 개발을 제외하고는 팀 개발
+
+화이트 칼라 -> 의자에 앉아서 머리를 쓰는 일 -> 컴퓨터 
+ -> 파일(word, hwp, c#, java, etc) 사용 -> 파일 공유(share)
+-> open(lock) with 권한 -> close(unlock)
+
+설치파일
+1. git
+2. totorise git
+3. sourcetree
+
+git vs github
+  git: 로컬에서 파일 변경 사항들을 관리하는 도구
+  github: 로컬에서 만든 파일을 클라우드에서도 관리할 수 있도록 지원하는 사이트
+            ( 그외 사이트: bitbucket, ...)
+
+linux ls명령어: 파일리스트 보기
+  cf) ls -al   (파일에 대한 자세한 정보 확인)
+linux cd명령어: 폴더 이동
+  cf) cd ..    (부모 폴더로 이동)
+linux pwd명령어: 현재 자신의 폴더 위치 안내
+
+git config --list 했을 경우 user.name과 user.email이 없는 경우 아래 명령어 사용
+  -> git config --global user.name 여러분의이름(영어로)    엔터(enter)
+  -> git config --global user.email 여러븐의이메일주소       엔터(enter)
+
+git init: 해당 폴더 기준부터 git을 사용하기 위한 기본 세팅
+git status: git에서 관리하는 파일 및 폴더들의 상태 확인
+
+git에 대한 기본용어
+  - branch: 깃의 작업영역
+  - master: 깃의 기본 브랜치 이름. cf) 바꾸는 거 기능
+  - HEAD: 현재 작업 브랜치의 위치
+  - remote/origin: 깃의 원격(ex) github, bitbucket etc) 기본 브랜치의 alias
+
+git add 파일명1 파일명2: commit을 할 수 있도록 staged area에 넣도록 작업하는 명령어
+git commit -m '메시지': staged area안에 있는 파일들을 commit공간(혹은 스냅샷)으로 저장하는 명령어
+git log: commit한 메시지 및 언제, 누가 했는지 볼 수 있는 명령어
+  cf) git log -p 자세한 내용까지 확인 가능
+
+CRUD(Create(생성) Read(조회) Update(수정) Delete(삭제))
+
+git diff: 변경한 것과의 전후가 어떻게 바꼈는지 알려주는 명령어
+
+git commit --amend -m '메시지 변경내용': 마지막 commit한 메시지 내용을 변경
+
+git reset: 커밋을 지우는 명령어(버전 관리 되돌리기 명령어)
+  git reset HEAD^: 마지막 커밋을 스테이징하기 전 상태로 되돌리는 명령어
+       -> 최근 1개(^)의 커밋 삭제 + 변경된 파일 unstaging상태로 유지
+  git reset --hard HEAD^: 최근 1개(^)의 커밋 삭제 + 변경된 파일도 함께 되돌림
+
+git repository: git으로 관리하는 공간
+
+git의 원격 저장소인 github 관련 명령
+  git remote: 원격 저장소에 관련 명령어
+     cf) git remote -v      -> 원격 저장소에 연결된 url 조회
+         git remote add origin 원격저장소url   -> 원격 저장소 실제 연결하기
+  git push: local에서 작업한 내용을 git 원격 저장소에 저장
+  git에서 파일 upload과정 
+    1. 파일 생성 혹은 삭제
+    2. git add
+    3. git commit
+    4. git push
+
+  git pull: remote에서 작업한 내용을 local git저장소에 저장(git clone이 된 상태에서) with merge
+  git fetch: remote에서 작업한 내용을 local git저장소에 저장 with no merge
+  git clone 원격저장소url: remote의 작업한 모든 내용을 맨 처음 내 local에 새로운 폴더로 가져오기
+
+  git branch:  현재 local에 있는 모든 브랜치를 보여주는 명령어
+  git branch 브랜치명: local 브랜치를 만들기
+  git branch -r: 원격(remote) 브랜치 리스트 조회하기
+  git branch -a: local 및 remote 브랜치 리스트 모두 조회하기
+  git branch -d 만들어진브랜치명: local에 만들어진 브랜치를 삭제
+  git branch -D 만들어진브랜치명: local에 만들어진 브랜치를 강제로 삭제
+  git push origin --delete 원격에만들어진브랜치명: remote 브랜치명 삭제
+
+  git checkout 만들어진브랜치명: 만들어진브랜치명으로 작업영역 변경
+  git checkout -b 만들어질브랜치명: 만들어질브랜치명으로 만들고 작업영역까지 변경
+  git fetch -p: remote에 있는 브랜치와 sync를 맞춘다.(-p는 prune의 약자)
+
+  git merge 머지할브랜치명: 현재 해당 브랜치에서 머지할브랜치명을 merge -> 로컬 merge
+  git merge시에 충돌해결 방법('|merging' 나왔을 때 대처방법)
+    - 충돌한 파일들 모두를 직접 알맞게 텍스트편집기로 수정
+    - 수정한 모든 파일을 'git add'
+    - git commit
+    - 원격 저장소에 저장하려면 'git push'
+
+  pull request(pr) -> 원격 merge
+
+  git 충돌해결하기
+     1. 2개의 브랜치 생성
+         - git branch feature1
+         - git branch feature2
+     2. 위 2개의 브랜치에서 같은 파일과 같은 라인을 수정하고 commit
+         - git checkout feature1
+         - 'test2.txt'파일 생성 및 내용 삽입
+         - git add test2.txt
+         - git commit -m '변경1'
+         - git checkout feature2
+         - 'test2.txt'파일 생성 및 내용 삽입
+         - git add test2.txt
+         - git commit -m '변경2'
+      3. master브랜치로 이동
+         - git checkout master
+      4. feature1브랜치를 master브랜치로 merge
+         - git merge feature1
+      5. feature2브랜치를 master브랜치로 merge
+         - git merge feature2
+            -> 이 때 충돌 발생
+      6. 충돌된 파일 원하는대로 수정(충돌 해결하기)
+      7. 수정된 파일을 add && commit

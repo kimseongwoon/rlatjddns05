@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+     * 하위(자손) 요소: 특정 요소를 기준으로 그 안에 포함된 모든 요소. <-> 상위 요소
+     *   ex) grandparent1은 parent1과 child1 하위 요소를 가짐
+     * 자식(1촌) 요소: 현재 요소를 기준으로 바로 한 단계 아래 요소. 
+     *   ex) grandparent1는 parent1 자식 요소를 가짐. parent1은 child1 자식 요소를 가짐 
+     * 손자(2촌) 요소: 자식 요소의 한 단계 아래 요소
+     *   ex) grandparent1은 child1 손자 요소를 가짐 
+     */
+
+     section p {  /* 빈 칸은 하위 요소 */
+       color: blue;
+     }
+  </style>
+</head>
+<body>
+  <div id="grandparent1">
+    <div id="parent1">
+      <div id="child1"></div>
+    </div>
+  </div>
+
+  <section>
+    <h1>예약 방법 & 사용 요금</h1>
+    <p>아직 온라인 예약 신청이 준비되어 있지 않습니다. <br>전화(xxx-xxxx-xxxx)로 문의 바랍니다.</p>
+    <div>
+      <p>가족실(2~4인) : 60,000원/일</p>
+      <p>도미토리(4인 공용) : 25,000원/일</p>
+    </div>
+  </section>   
+</body>
+</html>

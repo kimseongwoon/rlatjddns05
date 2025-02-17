@@ -1,0 +1,14 @@
+C:\Users\05\source\repos\chapter03-ex2\obj\Debug\net8.0\chapter03-ex2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\05\source\repos\chapter03-ex2\obj\Debug\net8.0\chapter03-ex2.AssemblyInfoInputs.cache
+C:\Users\05\source\repos\chapter03-ex2\obj\Debug\net8.0\chapter03-ex2.AssemblyInfo.cs
+C:\Users\05\source\repos\chapter03-ex2\obj\Debug\net8.0\chapter03-ex2.csproj.CoreCompileInputs.cache
+C:\Users\05\source\repos\chapter03-ex2\bin\Debug\net8.0\chapter03-ex2.exe
+C:\Users\05\source\repos\chapter03-ex2\bin\Debug\net8.0\chapter03-ex2.deps.json
+C:\Users\05\source\repos\chapter03-ex2\bin\Debug\net8.0\chapter03-ex2.runtimeconfig.json
+C:\Users\05\source\repos\chapter03-ex2\bin\Debug\net8.0\chapter03-ex2.dll
+C:\Users\05\source\repos\chapter03-ex2\bin\Debug\net8.0\chapter03-ex2.pdb
+C:\Users\05\source\repos\chapter03-ex2\obj\Debug\net8.0\chapter03-ex2.dll
+C:\Users\05\source\repos\chapter03-ex2\obj\Debug\net8.0\refint\chapter03-ex2.dll
+C:\Users\05\source\repos\chapter03-ex2\obj\Debug\net8.0\chapter03-ex2.pdb
+C:\Users\05\source\repos\chapter03-ex2\obj\Debug\net8.0\chapter03-ex2.genruntimeconfig.cache
+C:\Users\05\source\repos\chapter03-ex2\obj\Debug\net8.0\ref\chapter03-ex2.dll
