@@ -1,74 +1,107 @@
 package org.zerock.b01.repository.search;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
+import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.zerock.b01.domain.Board;
+import org.zerock.b01.dto.BoardDTO;
+import org.zerock.b01.dto.BoardListReplyCountDTO;
+import org.zerock.b01.dto.PageRequestDTO;
+import org.zerock.b01.dto.PageResponseDTO;
+import org.zerock.b01.mapper.BoardMapper;
+import org.zerock.b01.repository.BoardRepository;
+import org.zerock.b01.service.BoardService;
 
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
+@Log4j2
 @RequiredArgsConstructor
-public class BoardSearchImpl implements BoardSearch {
-    private final EntityManager entityManager;
+public class BoardSearchImpl implements BoardService {
+    private final ModelMapper modelMapper;
+    private final BoardRepository boardRepository;
+    //private final BoardDAO boardDAO;
+    private final BoardMapper boardMapper;
 
-    // JPQL
     @Override
-    public Page<Board> searchAll(String[] types, String keyword, Pageable pageable) {
-        // JPQL로 작성
-        StringBuilder jpql = new StringBuilder("SELECT b FROM Board b WHERE b.bno > 0");
+    public Long register(BoardDTO boardDTO) {
+        Board board = modelMapper.map(boardDTO, Board.class);
 
-        // 동적 검색 조건 추가
-        if ((types != null && types.length > 0) && keyword != null) {
-            jpql.append(" AND (");
+        //Long bno = boardRepository.save(board).getBno(); // jpa로 insert
+        Long bno = boardMapper.insert(board);  // mybatis로 insert하기
 
-            for (int i = 0; i < types.length; i++) {
-                String type = types[i];
-                switch (type) {
-                    case "t":
-                        jpql.append("b.title LIKE :keyword");
-                        break;
-                    case "c":
-                        jpql.append("b.content LIKE :keyword");
-                        break;
-                    case "w":
-                        jpql.append("b.writer LIKE :keyword");
-                        break;
-                }
+        return bno;
+    }
 
-                // 각 조건 사이에 "OR" 추가
-                if (i < types.length - 1) {
-                    jpql.append(" OR ");
-                }
-            }
-            jpql.append(")");
-        }
-        jpql.append(" ORDER BY bno DESC");
+    @Override
+    public BoardDTO readOne(Long bno) {
 
-        // JPQL로 쿼리 생성
-        TypedQuery<Board> query = entityManager.createQuery(jpql.toString(), Board.class);
-        TypedQuery<Long> countQuery = entityManager.createQuery(
-                jpql.toString().replace("SELECT b", "SELECT COUNT(b)"), Long.class
-        );
+        Optional<Board> result = boardRepository.findById(bno);
 
-        // 파라미터 바인딩
-        if ((types != null && types.length > 0) && keyword != null) {
-            query.setParameter("keyword", "%" + keyword + "%");
-            countQuery.setParameter("keyword", "%" + keyword + "%");
-        }
+        Board board = result.orElseThrow();
 
-        // 페이징 처리
-        query.setFirstResult((int) pageable.getOffset());
-        query.setMaxResults(pageable.getPageSize());
+        BoardDTO boardDTO = modelMapper.map(board, BoardDTO.class);
 
-        // 결과 조회
-        List<Board> list = query.getResultList();
-        long count = countQuery.getSingleResult();
+        return boardDTO;
+    }
 
-        return new PageImpl<>(list, pageable, count);
+    @Override
+    public void modify(BoardDTO boardDTO) {
+        Optional<Board> result = boardRepository.findById(boardDTO.getBno());
+        Board board = result.orElseThrow();
+        board.change(boardDTO.getTitle(), boardDTO.getContent());
+
+        boardRepository.save(board);
+    }
+
+    @Override
+    public void remove(Long bno) {
+        boardRepository.deleteById(bno);
+    }
+
+    @Override
+    public PageResponseDTO<BoardDTO> list(PageRequestDTO pageRequestDTO) {
+        // 브라우저에서 요청한 파라미터 값 세팅
+        String[] types = pageRequestDTO.getTypes();
+        String keyword = pageRequestDTO.getKeyword();
+        Pageable pageable = pageRequestDTO.getPageable("regdate");
+
+        // 브라우저에서 받은 파라미터로 board테이블 sql작성하여 Page<Board> 객체로 전달
+        Page<Board> result = boardRepository.searchAll(types, keyword, pageable);
+
+        // modelMapper를 통해서 Entity -> DTO로 변환
+        List<BoardDTO> dtoList = result.getContent().stream()
+                .map(board -> modelMapper.map(board, BoardDTO.class))
+                .collect(Collectors.toList());
+
+        // view엔진에 전달할 정보를 담은 PageResponseDTO 객체 전달
+        return PageResponseDTO.<BoardDTO>builder()
+                .pageRequestDTO(pageRequestDTO)
+                .dtoList(dtoList)
+                .total((int) result.getTotalElements())
+                .build();
+    }
+
+    @Override
+    public PageResponseDTO<BoardListReplyCountDTO> listWithReplyCount(PageRequestDTO pageRequestDTO) {
+        // 브라우저에서 요청한 파라미터 값 세팅
+        String[] types = pageRequestDTO.getTypes();
+        String keyword = pageRequestDTO.getKeyword();
+        Pageable pageable = pageRequestDTO.getPageable("regdate");
+
+        // 브라우저에서 받은 파라미터로 board테이블 sql작성하여 Page<Board> 객체로 전달
+        Page<BoardListReplyCountDTO> result = boardRepository.searchWithReplyCount(types, keyword, pageable);
+
+        return PageResponseDTO.<BoardListReplyCountDTO>builder()
+                .pageRequestDTO(pageRequestDTO)
+                .dtoList(result.getContent())
+                .total((int) result.getTotalElements())
+                .build();
     }
 }

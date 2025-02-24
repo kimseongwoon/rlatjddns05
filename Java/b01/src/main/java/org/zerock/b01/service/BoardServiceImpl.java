@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.zerock.b01.domain.Board;
 import org.zerock.b01.dto.BoardDTO;
+import org.zerock.b01.dto.BoardListReplyCountDTO;
 import org.zerock.b01.dto.PageRequestDTO;
 import org.zerock.b01.dto.PageResponseDTO;
 import org.zerock.b01.mapper.BoardMapper;
@@ -63,7 +64,7 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public PageResponseDTO list(PageRequestDTO pageRequestDTO) {
+    public PageResponseDTO<BoardDTO> list(PageRequestDTO pageRequestDTO) {
         // 브라우저에서 요청한 파라미터 값 세팅
         String[] types = pageRequestDTO.getTypes();
         String keyword = pageRequestDTO.getKeyword();
@@ -77,9 +78,26 @@ public class BoardServiceImpl implements BoardService {
                 .map(board -> modelMapper.map(board, BoardDTO.class)).collect(Collectors.toList());
 
         // view엔진에 전달할 정보를 담은 PageResponseDTO 객체 전달
-        return PageResponseDTO.builder()
+        return PageResponseDTO.<BoardDTO>builder()
                 .pageRequestDTO(pageRequestDTO)
                 .dtoList(dtoList)
+                .total((int)result.getTotalElements())
+                .build();
+    }
+
+    @Override
+    public PageResponseDTO<BoardListReplyCountDTO> listWithReplyCount(PageRequestDTO pageRequestDTO) {
+        // 브라우저에서 요청한 파라미터 값 세팅
+        String[] types = pageRequestDTO.getTypes();
+        String keyword = pageRequestDTO.getKeyword();
+        Pageable pageable = pageRequestDTO.getPageable("regdate");
+
+        // 브라우저에서 받은 파라미터로 board테이블 sql작성하여 Page<Board> 객체로 전달
+        Page<BoardListReplyCountDTO> result = boardRepository.searchWithReplyCount(types, keyword, pageable);
+
+        return PageResponseDTO.<BoardListReplyCountDTO>builder()
+                .pageRequestDTO(pageRequestDTO)
+                .dtoList(result.getContent())
                 .total((int)result.getTotalElements())
                 .build();
     }

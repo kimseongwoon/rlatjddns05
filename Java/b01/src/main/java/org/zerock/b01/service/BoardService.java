@@ -3,6 +3,7 @@ package org.zerock.b01.service;
 import org.zerock.b01.dto.BoardDTO;
 import org.zerock.b01.dto.PageRequestDTO;
 import org.zerock.b01.dto.PageResponseDTO;
+import org.zerock.b01.dto.BoardListReplyCountDTO;
 
 public interface BoardService {
     // 게시물 등록 서비로 로직 메소드
@@ -14,5 +15,8 @@ public interface BoardService {
     // 게시물 1행 삭제 서비스로 로직 메소드
     void remove(Long bno);
 
-    PageResponseDTO list(PageRequestDTO pageRequestDTO);
+    PageResponseDTO<BoardDTO> list(PageRequestDTO pageRequestDTO);
+
+    // 댓글의 숫자까지 처리
+    PageResponseDTO<BoardListReplyCountDTO> listWithReplyCount(PageRequestDTO pageRequestDTO);
 }

@@ -8,7 +8,7 @@ import lombok.ToString;
 
 @Getter
 @ToString
-public class PageResponseDTO {
+public class PageResponseDTO<T> {
     // 페이징 내부 정보들
     private int page; // 페이지 쪽
     private int size; // 페이지 사이즈(dtoList의 size개수와 일부 같다)
@@ -21,12 +21,12 @@ public class PageResponseDTO {
     private boolean next; // 다음페이지 존재 여부
 
     // 실제 할일 목록 정보들
-    private List<BoardDTO> dtoList;
+    private List<T> dtoList;
 
     @Builder
     public PageResponseDTO(
             PageRequestDTO pageRequestDTO,
-            List<BoardDTO> dtoList,
+            List<T> dtoList,
             int total
     ) {
         this.page = pageRequestDTO.getPage();
