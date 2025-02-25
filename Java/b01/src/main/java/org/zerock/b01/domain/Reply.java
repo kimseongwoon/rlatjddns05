@@ -28,4 +28,12 @@ public class Reply extends BaseEntity{
                 (board != null ? board.getContent() + board.getTitle() : "")
                 ;
     }
+
+    public void changeText(String text) {
+        this.replyText = text;
+    }
+
+    public void setBoard(Board board) {
+        this.board = board;
+    }
 }

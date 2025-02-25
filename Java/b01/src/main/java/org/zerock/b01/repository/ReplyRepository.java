@@ -8,4 +8,6 @@ import org.springframework.data.repository.query.Param;
 import org.zerock.b01.domain.Reply;
 
 public interface ReplyRepository extends JpaRepository<Reply, Long> {
+    @Query("select r from Reply r where r.board.bno = :bno")
+    Page<Reply> listOfBoard(@Param("bno") Long bno, Pageable pageable);
 }

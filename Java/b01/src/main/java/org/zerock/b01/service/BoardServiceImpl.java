@@ -14,6 +14,7 @@ import org.zerock.b01.dto.PageResponseDTO;
 import org.zerock.b01.mapper.BoardMapper;
 import org.zerock.b01.repository.BoardRepository;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -39,11 +40,8 @@ public class BoardServiceImpl implements BoardService {
 
     @Override
     public BoardDTO readOne(Long bno) {
-
         Optional<Board> result = boardRepository.findById(bno);
-
         Board board = result.orElseThrow();
-
         BoardDTO boardDTO = modelMapper.map(board, BoardDTO.class);
 
         return boardDTO;
@@ -75,7 +73,8 @@ public class BoardServiceImpl implements BoardService {
 
         // modelMapper를 통해서 Entity -> DTO로 변환
         List<BoardDTO> dtoList = result.getContent().stream()
-                .map(board -> modelMapper.map(board, BoardDTO.class)).collect(Collectors.toList());
+                .map(board -> modelMapper.map(board, BoardDTO.class))
+                .collect(Collectors.toList());
 
         // view엔진에 전달할 정보를 담은 PageResponseDTO 객체 전달
         return PageResponseDTO.<BoardDTO>builder()
