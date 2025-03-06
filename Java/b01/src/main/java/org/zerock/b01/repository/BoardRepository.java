@@ -2,6 +2,7 @@ package org.zerock.b01.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -9,8 +10,9 @@ import org.zerock.b01.domain.Board;
 import org.zerock.b01.repository.search.BoardSearch;
 
 import java.util.List;
+import java.util.Optional;
 
-public interface BoardRepository  extends JpaRepository<Board, Long>, BoardSearch {
+public interface BoardRepository extends JpaRepository<Board, Long>, BoardSearch {
     // JPA Query Method ----------------------------------------------------
     List<Board> findByTitleAndWriter(String title, String writer);
     List<Board> findByWriterIn(List<String> writers);
@@ -24,4 +26,8 @@ public interface BoardRepository  extends JpaRepository<Board, Long>, BoardSearc
     @Query("select b from Board b where b.title like concat('%', :keyword, '%')")
     Page<Board> findKeyword(@Param("keyword") String keyword, Pageable pageable); // findByTitleContainingOrderByBnoDesc
 
+    // N개수만 만큼 select하는 것이 아니라 한꺼번에 imageSet로 가져오는 방법
+    @EntityGraph(attributePaths = {"imageSet"})
+    @Query("select b from Board b where b.bno = :bno")
+    Optional<Board> findByIdWithImages(Long bno);
 }

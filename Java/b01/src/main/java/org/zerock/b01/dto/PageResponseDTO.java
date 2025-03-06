@@ -2,11 +2,11 @@ package org.zerock.b01.dto;
 
 import java.util.List;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class PageResponseDTO<T> {
     // 페이징 내부 정보들

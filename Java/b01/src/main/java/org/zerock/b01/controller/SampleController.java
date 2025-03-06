@@ -16,9 +16,9 @@ import java.util.stream.IntStream;
 @Controller
 @Log4j2
 public class SampleController {
-    @GetMapping("/hello")   // url이 /hello로 끝나면 해당 메소드 실행
+    @GetMapping("/hello")  // url이 /hello로 끝나면 해당 메소드가 실행
     public void hello(Model model) {
-        log.info("hello...................");
+        log.info("hello.................");
 
         model.addAttribute("msg", "Hello World");
         // 마지막에는 /resources/templates/hello.html파일로 이동
@@ -75,11 +75,16 @@ public class SampleController {
 
     @GetMapping("/ex/ex3")
     public void ex3(Model model) {
-        model.addAttribute("arr", new String[]{"AAA", "BBB", "CCC"});
+        model.addAttribute("arr", new String[]{"AAA","BBB","CCC"});
     }
 
     @GetMapping("/ex/ex4")
     public void ex4(Model model) {
 
     }
+
+//    @GetMapping("/")
+//    public String home() {
+//        return "redirect:/board/list";
+//    }
 }

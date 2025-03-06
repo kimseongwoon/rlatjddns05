@@ -8,11 +8,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.test.annotation.Commit;
+import org.springframework.transaction.annotation.Transactional;
 import org.zerock.b01.domain.Board;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.IntStream;
 
 @SpringBootTest
@@ -20,6 +23,8 @@ import java.util.stream.IntStream;
 public class BoardRepositoryTests {
     @Autowired
     private BoardRepository boardRepository;
+    @Autowired
+    private ReplyRepository replyRepository;
 
     // jpa insert 기능 테스트
     @Test
@@ -135,4 +140,87 @@ public class BoardRepositoryTests {
         boardPage.forEach(board -> log.info(board));
     }
 
+    @Test
+    public void testInsertWithImages() {
+        // 게시물
+        Board board = Board.builder()
+                .title("Image Test")
+                .content("첨부파일 테스트")
+                .writer("tester")
+                .build();
+        // 게시물의 첨부파일
+        for(int i = 0; i < 3; i++) {
+            board.addImage(UUID.randomUUID().toString(), "file" + i + ".jpg");
+        }
+        boardRepository.save(board);
+    }
+
+    /**
+     * @EntityGraph 테스트
+     */
+    @Test
+    //@Transactional // OneToMany에서 N+1문제가 발생
+    public void testReadWithImages() {
+        //Optional<Board> result = boardRepository.findById(1L); // lazy로 fetch
+        Optional<Board> result = boardRepository.findByIdWithImages(1L);
+        Board board = result.orElseThrow();
+
+        log.info(board);
+        log.info("-----------------");
+        log.info(board.getImageSet()); // error
+    }
+
+    /**
+     * orphanRemoval 속성 테스트
+     */
+    @Transactional
+    @Commit
+    @Test
+    public void testModifyImages() {
+        Optional<Board> result = boardRepository.findByIdWithImages(1L);
+        Board board = result.orElseThrow();
+
+        // 기존의 첨부파일들과 연계된 게시물 번호속성을 null로 세팅(orphanRemoval가 true일 경우 적용)
+        board.clearImages();
+
+        for(int i = 0; i < 2; i++) {
+            board.addImage(UUID.randomUUID().toString(), "updatefile" + i + ".jpg");
+        }
+
+        boardRepository.save(board);
+    }
+
+    /**
+     * 게시글 삭제 및 관련 댓글 삭제 테스트
+     */
+    @Transactional
+    @Commit
+    @Test
+    public void testRemoveAll() {
+        Long bno = 1L;
+
+        // 댓글 삭제(@ManyToOne에는 orphanRemoval속성 없어서 별도로 댓글 삭제 jpa호출)
+        replyRepository.deleteByBoard_Bno(bno);
+        // 게시글 삭제
+        boardRepository.deleteById(bno);
+    }
+
+    @Test
+    public void testInsertAll() {
+        // 게시물 100개 및 첨부파일 데이터 추가
+        for(int i = 1; i <= 100; i++) {
+            Board board = Board.builder()
+                    .title("Title.. " + i)
+                    .content("Content.. " + i)
+                    .writer("Writer.. " + i)
+                    .build();
+
+            for(int j = 0; j < 3; j++) {
+                if (i % 5 == 0) {     // 게시물이 5의 배수인 것들만 첨부파일 데이터 추가
+                    board.addImage(UUID.randomUUID().toString(), i + "file" + j + ".jpg");
+                }
+            }
+            boardRepository.save(board);
+        }
+    }
 }
